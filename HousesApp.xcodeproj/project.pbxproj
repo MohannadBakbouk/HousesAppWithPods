@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,11 @@
 		03C857FB290574370054178A /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857FA290574370054178A /* UINavigationController.swift */; };
 		03C857FD290575EB0054178A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857FC290575EB0054178A /* Coordinator.swift */; };
 		03C857FF290575F60054178A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857FE290575F60054178A /* MainCoordinator.swift */; };
+		03C85801290579350054178A /* APIManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85800290579350054178A /* APIManagerProtocol.swift */; };
+		03C85803290579410054178A /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85802290579410054178A /* APIManager.swift */; };
+		03C85805290579840054178A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85804290579840054178A /* EndPoint.swift */; };
+		03C85807290579940054178A /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85806290579940054178A /* Method.swift */; };
+		03C85809290579AB0054178A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85808290579AB0054178A /* APIError.swift */; };
 		47434AC4679CF59B09FB8688 /* Pods_HousesApp_HousesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CA1F17829D89F6BE422012 /* Pods_HousesApp_HousesAppUITests.framework */; };
 		6DA9A1F8271BD6B2166A160A /* Pods_HousesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567C28DF883796D4CA6F2BAC /* Pods_HousesApp.framework */; };
 		EFC8C472CBEAC112D208CAFC /* Pods_HousesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0A20A69A87DB8AC487BCF6 /* Pods_HousesAppTests.framework */; };
@@ -60,6 +65,11 @@
 		03C857FA290574370054178A /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		03C857FC290575EB0054178A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		03C857FE290575F60054178A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		03C85800290579350054178A /* APIManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerProtocol.swift; sourceTree = "<group>"; };
+		03C85802290579410054178A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		03C85804290579840054178A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		03C85806290579940054178A /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		03C85808290579AB0054178A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		1C77F0E80A6C91C101B8C026 /* Pods-HousesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HousesApp.debug.xcconfig"; path = "Target Support Files/Pods-HousesApp/Pods-HousesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4E50C8088B3A9AD881AF9953 /* Pods-HousesApp-HousesAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HousesApp-HousesAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-HousesApp-HousesAppUITests/Pods-HousesApp-HousesAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		567C28DF883796D4CA6F2BAC /* Pods_HousesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HousesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +248,8 @@
 		03C857F1290572820054178A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				03C85800290579350054178A /* APIManagerProtocol.swift */,
+				03C85802290579410054178A /* APIManager.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -245,6 +257,9 @@
 		03C857F2290572860054178A /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				03C85804290579840054178A /* EndPoint.swift */,
+				03C85806290579940054178A /* Method.swift */,
+				03C85808290579AB0054178A /* APIError.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -305,7 +320,6 @@
 				D91F44A59C2977FA16A6F6A9 /* Pods-HousesAppTests.debug.xcconfig */,
 				EDED444B5431942E87000F69 /* Pods-HousesAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -547,13 +561,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C857F6290573400054178A /* UIView.swift in Sources */,
+				03C85801290579350054178A /* APIManagerProtocol.swift in Sources */,
+				03C85803290579410054178A /* APIManager.swift in Sources */,
 				03C857FF290575F60054178A /* MainCoordinator.swift in Sources */,
+				03C85805290579840054178A /* EndPoint.swift in Sources */,
 				03C857BB290571040054178A /* HousesController.swift in Sources */,
 				03C857B7290571040054178A /* AppDelegate.swift in Sources */,
 				03C857FB290574370054178A /* UINavigationController.swift in Sources */,
+				03C85807290579940054178A /* Method.swift in Sources */,
 				03C857B9290571040054178A /* SceneDelegate.swift in Sources */,
 				03C857EE290571DD0054178A /* Constant.swift in Sources */,
 				03C857FD290575EB0054178A /* Coordinator.swift in Sources */,
+				03C85809290579AB0054178A /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

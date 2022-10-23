@@ -11,3 +11,11 @@ enum MainAPI {
     static let key = ""
     static let content = "application/json; charset=utf-8"
 }
+
+enum PhotoAPI {
+    static let url = "https://api.unsplash.com/"
+    static let key = "qSz_rhiBdd0roXBBvK_7nk5uxWEJmyQfSq4-gWjldrg"
+    static let content = "application/json; charset=utf-8"
+}
+
+

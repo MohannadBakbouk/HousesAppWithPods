@@ -18,4 +18,7 @@ enum PhotoAPI {
     static let content = "application/json; charset=utf-8"
 }
 
-
+enum Images {
+    static let exclamationmark = "exclamationmark.circle.fill"
+    static let mapPin = "star"
+}

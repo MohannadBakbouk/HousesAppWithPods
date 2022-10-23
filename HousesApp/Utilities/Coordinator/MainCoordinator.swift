@@ -18,7 +18,8 @@ final class MainCoordinator: Coordinator{
     }
     
     func start() {
-        let housesView = HousesController()
+        let housesView = HousesController(viewModel: HousesViewModel(houseService: HouseService(), photoService: PhotoService()))
+        housesView.coordinator = self
         pushViewControllerToStack(with: housesView)
     }
     

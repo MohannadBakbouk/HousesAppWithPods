@@ -31,7 +31,6 @@ final class APIManager: APIManagerProtocol {
     func call<T>(request: URLRequest) -> AnyPublisher<T , APIError>  where T : Decodable, T : Encodable {
         return URLSession.shared
         .dataTaskPublisher(for: request)
-        .print()
         .tryMap{ output in
             guard  (output.response as? HTTPURLResponse)?.statusCode == 200  else {throw APIError.server}
             return output.data

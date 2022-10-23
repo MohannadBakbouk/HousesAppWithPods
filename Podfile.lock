@@ -1,0 +1,24 @@
+PODS:
+  - Kingfisher (7.2.2)
+  - SkeletonView (1.30.4)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - Kingfisher (~> 7.0)
+  - SkeletonView
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - SkeletonView
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Kingfisher: 184d4d1a8c36666e663caf8e08abe87898595c53
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 35951d545637ecec4b672faf640a6b6c794b3495
+
+COCOAPODS: 1.11.2

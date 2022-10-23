@@ -9,7 +9,6 @@ import UIKit
 
 extension UICollectionView{
     func setMessage(_ message : String , icon : String = Images.exclamationmark){
-        
         let view = UIView()
         self.backgroundView = view
         

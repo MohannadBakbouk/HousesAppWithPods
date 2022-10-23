@@ -10,7 +10,6 @@ import SnapKit
 import SkeletonView
 
 final class HousesController: BaseViewController<HousesViewModel> {
-    
     let padding : CGFloat = 8.0
     
     lazy var collectionView : UICollectionView = {
@@ -99,7 +98,7 @@ extension HousesController: UICollectionViewDelegate , UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-      //  viewModel.filterSelected.send(viewModel.filters.value[indexPath.row])
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

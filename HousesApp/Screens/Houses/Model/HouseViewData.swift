@@ -13,7 +13,6 @@ struct HouseViewData {
 }
 
 extension HouseViewData {
-    
     init(info : HouseQueryItem , photo : PhotoQueryItem) {
         self.name = info.name
         self.region = info.region

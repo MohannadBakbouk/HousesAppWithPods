@@ -20,5 +20,5 @@ enum PhotoAPI {
 
 enum Images {
     static let exclamationmark = "exclamationmark.circle.fill"
-    static let mapPin = "star"
+    static let mapPin = "mappin.and.ellipse"
 }

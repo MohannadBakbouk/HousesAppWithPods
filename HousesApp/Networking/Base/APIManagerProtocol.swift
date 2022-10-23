@@ -14,4 +14,3 @@ protocol  APIManagerProtocol {
     func request<T: Codable>(endpoint: EndPoint , method: Method , params: JSON?) -> AnyPublisher<T, APIError>
     func call<T: Codable>(request: URLRequest) -> AnyPublisher<T, APIError>
 }
-

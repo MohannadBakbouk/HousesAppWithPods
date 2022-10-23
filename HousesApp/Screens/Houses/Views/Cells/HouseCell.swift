@@ -37,7 +37,7 @@ final class HouseCell: UICollectionViewCell {
     }()
     
     private var addressImageView: UIImageView = {
-        let img = UIImageView(image: UIImage(systemName: "mappin.and.ellipse"))
+        let img = UIImageView(image: UIImage(systemName: Images.mapPin))
         img.tintColor = .systemGray2
         img.isSkeletonable = true
         return img

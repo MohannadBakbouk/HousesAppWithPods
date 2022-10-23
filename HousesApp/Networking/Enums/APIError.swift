@@ -31,4 +31,3 @@ enum APIError : Error {
         return error as? APIError ?? .errorOccured
     }
 }
-

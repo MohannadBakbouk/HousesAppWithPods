@@ -24,6 +24,36 @@
 		03C85805290579840054178A /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85804290579840054178A /* EndPoint.swift */; };
 		03C85807290579940054178A /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85806290579940054178A /* Method.swift */; };
 		03C85809290579AB0054178A /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85808290579AB0054178A /* APIError.swift */; };
+		03C8580B29057E8C0054178A /* HouseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8580A29057E8C0054178A /* HouseService.swift */; };
+		03C8580D29057ED40054178A /* HouseQueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8580C29057ED40054178A /* HouseQueryItem.swift */; };
+		03C8580F29057F3C0054178A /* PhotoQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8580E29057F3C0054178A /* PhotoQuery.swift */; };
+		03C8581129057F790054178A /* PhotoQueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8581029057F790054178A /* PhotoQueryItem.swift */; };
+		03C8581329057FA80054178A /* ResultLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8581229057FA80054178A /* ResultLinks.swift */; };
+		03C8581529057FAF0054178A /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8581429057FAF0054178A /* Tag.swift */; };
+		03C858172905801C0054178A /* Source.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C858162905801C0054178A /* Source.swift */; };
+		03C85819290580300054178A /* Ancestry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85818290580300054178A /* Ancestry.swift */; };
+		03C8581B290580B40054178A /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8581A290580B40054178A /* Urls.swift */; };
+		03C8581D290580C90054178A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8581C290580C90054178A /* User.swift */; };
+		03C8581F290580FB0054178A /* UserLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8581E290580FB0054178A /* UserLinks.swift */; };
+		03C85821290581340054178A /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85820290581340054178A /* ProfileImage.swift */; };
+		03C85823290581520054178A /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85822290581520054178A /* Social.swift */; };
+		03C85825290581840054178A /* ResultTopicSubmissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85824290581840054178A /* ResultTopicSubmissions.swift */; };
+		03C858272905818F0054178A /* ColorOfWater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C858262905818F0054178A /* ColorOfWater.swift */; };
+		03C85829290581CB0054178A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85828290581CB0054178A /* Category.swift */; };
+		03C8582B290581F60054178A /* CoverPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8582A290581F60054178A /* CoverPhoto.swift */; };
+		03C8582D290582970054178A /* JSONNull.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8582C290582970054178A /* JSONNull.swift */; };
+		03C8582F290582AF0054178A /* JSONAny.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8582E290582AF0054178A /* JSONAny.swift */; };
+		03C85831290582F10054178A /* JSONCodingKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85830290582F10054178A /* JSONCodingKey.swift */; };
+		03C85833290583370054178A /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85832290583370054178A /* PhotoService.swift */; };
+		03C85835290585F20054178A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85834290585F20054178A /* BaseViewController.swift */; };
+		03C858372905860B0054178A /* BaseViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C858362905860B0054178A /* BaseViewModelProtocol.swift */; };
+		03C8583A290587110054178A /* ErrorDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85839290587110054178A /* ErrorDataView.swift */; };
+		03C8583C290587940054178A /* HousesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8583B290587940054178A /* HousesViewModel.swift */; };
+		03C8583E290587DB0054178A /* HousesViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8583D290587DB0054178A /* HousesViewModelProtocol.swift */; };
+		03C8584029058A710054178A /* HouseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8583F29058A710054178A /* HouseCell.swift */; };
+		03C8584329058E480054178A /* PhotoParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8584229058E480054178A /* PhotoParams.swift */; };
+		03C85845290592630054178A /* HouseViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C85844290592630054178A /* HouseViewData.swift */; };
+		03C8584729059B1B0054178A /* UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C8584629059B1B0054178A /* UICollectionView.swift */; };
 		47434AC4679CF59B09FB8688 /* Pods_HousesApp_HousesAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62CA1F17829D89F6BE422012 /* Pods_HousesApp_HousesAppUITests.framework */; };
 		6DA9A1F8271BD6B2166A160A /* Pods_HousesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 567C28DF883796D4CA6F2BAC /* Pods_HousesApp.framework */; };
 		EFC8C472CBEAC112D208CAFC /* Pods_HousesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0A20A69A87DB8AC487BCF6 /* Pods_HousesAppTests.framework */; };
@@ -70,6 +100,36 @@
 		03C85804290579840054178A /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		03C85806290579940054178A /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		03C85808290579AB0054178A /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		03C8580A29057E8C0054178A /* HouseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseService.swift; sourceTree = "<group>"; };
+		03C8580C29057ED40054178A /* HouseQueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseQueryItem.swift; sourceTree = "<group>"; };
+		03C8580E29057F3C0054178A /* PhotoQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQuery.swift; sourceTree = "<group>"; };
+		03C8581029057F790054178A /* PhotoQueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoQueryItem.swift; sourceTree = "<group>"; };
+		03C8581229057FA80054178A /* ResultLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultLinks.swift; sourceTree = "<group>"; };
+		03C8581429057FAF0054178A /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		03C858162905801C0054178A /* Source.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Source.swift; sourceTree = "<group>"; };
+		03C85818290580300054178A /* Ancestry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ancestry.swift; sourceTree = "<group>"; };
+		03C8581A290580B40054178A /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		03C8581C290580C90054178A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		03C8581E290580FB0054178A /* UserLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLinks.swift; sourceTree = "<group>"; };
+		03C85820290581340054178A /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		03C85822290581520054178A /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
+		03C85824290581840054178A /* ResultTopicSubmissions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTopicSubmissions.swift; sourceTree = "<group>"; };
+		03C858262905818F0054178A /* ColorOfWater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorOfWater.swift; sourceTree = "<group>"; };
+		03C85828290581CB0054178A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		03C8582A290581F60054178A /* CoverPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverPhoto.swift; sourceTree = "<group>"; };
+		03C8582C290582970054178A /* JSONNull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONNull.swift; sourceTree = "<group>"; };
+		03C8582E290582AF0054178A /* JSONAny.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONAny.swift; sourceTree = "<group>"; };
+		03C85830290582F10054178A /* JSONCodingKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONCodingKey.swift; sourceTree = "<group>"; };
+		03C85832290583370054178A /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		03C85834290585F20054178A /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		03C858362905860B0054178A /* BaseViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModelProtocol.swift; sourceTree = "<group>"; };
+		03C85839290587110054178A /* ErrorDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDataView.swift; sourceTree = "<group>"; };
+		03C8583B290587940054178A /* HousesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewModel.swift; sourceTree = "<group>"; };
+		03C8583D290587DB0054178A /* HousesViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewModelProtocol.swift; sourceTree = "<group>"; };
+		03C8583F29058A710054178A /* HouseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseCell.swift; sourceTree = "<group>"; };
+		03C8584229058E480054178A /* PhotoParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoParams.swift; sourceTree = "<group>"; };
+		03C85844290592630054178A /* HouseViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewData.swift; sourceTree = "<group>"; };
+		03C8584629059B1B0054178A /* UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.swift; sourceTree = "<group>"; };
 		1C77F0E80A6C91C101B8C026 /* Pods-HousesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HousesApp.debug.xcconfig"; path = "Target Support Files/Pods-HousesApp/Pods-HousesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4E50C8088B3A9AD881AF9953 /* Pods-HousesApp-HousesAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HousesApp-HousesAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-HousesApp-HousesAppUITests/Pods-HousesApp-HousesAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		567C28DF883796D4CA6F2BAC /* Pods_HousesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HousesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +257,9 @@
 		03C857E92905714C0054178A /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				03C85838290586D20054178A /* Model */,
+				03C85834290585F20054178A /* BaseViewController.swift */,
+				03C858362905860B0054178A /* BaseViewModelProtocol.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -223,6 +286,7 @@
 			children = (
 				03C857F5290573400054178A /* UIView.swift */,
 				03C857FA290574370054178A /* UINavigationController.swift */,
+				03C8584629059B1B0054178A /* UICollectionView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -239,7 +303,7 @@
 			isa = PBXGroup;
 			children = (
 				03C857F9290573FA0054178A /* ViewModel */,
-				03C857F8290573E80054178A /* View */,
+				03C857F8290573E80054178A /* Views */,
 				03C857F7290573E20054178A /* Model */,
 			);
 			path = Houses;
@@ -267,6 +331,8 @@
 		03C857F32905728C0054178A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				03C8580A29057E8C0054178A /* HouseService.swift */,
+				03C85832290583370054178A /* PhotoService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -274,6 +340,25 @@
 		03C857F42905729A0054178A /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				03C8580C29057ED40054178A /* HouseQueryItem.swift */,
+				03C8580E29057F3C0054178A /* PhotoQuery.swift */,
+				03C8581029057F790054178A /* PhotoQueryItem.swift */,
+				03C8581229057FA80054178A /* ResultLinks.swift */,
+				03C8581429057FAF0054178A /* Tag.swift */,
+				03C858162905801C0054178A /* Source.swift */,
+				03C85818290580300054178A /* Ancestry.swift */,
+				03C8581A290580B40054178A /* Urls.swift */,
+				03C8581C290580C90054178A /* User.swift */,
+				03C8581E290580FB0054178A /* UserLinks.swift */,
+				03C85820290581340054178A /* ProfileImage.swift */,
+				03C85822290581520054178A /* Social.swift */,
+				03C85824290581840054178A /* ResultTopicSubmissions.swift */,
+				03C858262905818F0054178A /* ColorOfWater.swift */,
+				03C85828290581CB0054178A /* Category.swift */,
+				03C8582A290581F60054178A /* CoverPhoto.swift */,
+				03C8582C290582970054178A /* JSONNull.swift */,
+				03C8582E290582AF0054178A /* JSONAny.swift */,
+				03C85830290582F10054178A /* JSONCodingKey.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -281,23 +366,44 @@
 		03C857F7290573E20054178A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				03C8584229058E480054178A /* PhotoParams.swift */,
+				03C85844290592630054178A /* HouseViewData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		03C857F8290573E80054178A /* View */ = {
+		03C857F8290573E80054178A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				03C8584129058A740054178A /* Cells */,
 				03C857BA290571040054178A /* HousesController.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		03C857F9290573FA0054178A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				03C8583D290587DB0054178A /* HousesViewModelProtocol.swift */,
+				03C8583B290587940054178A /* HousesViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		03C85838290586D20054178A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03C85839290587110054178A /* ErrorDataView.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03C8584129058A740054178A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				03C8583F29058A710054178A /* HouseCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		224B1C77C4B1574DA251A5B2 /* Frameworks */ = {
@@ -560,19 +666,49 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03C8584729059B1B0054178A /* UICollectionView.swift in Sources */,
 				03C857F6290573400054178A /* UIView.swift in Sources */,
+				03C8583A290587110054178A /* ErrorDataView.swift in Sources */,
+				03C85831290582F10054178A /* JSONCodingKey.swift in Sources */,
 				03C85801290579350054178A /* APIManagerProtocol.swift in Sources */,
+				03C8581F290580FB0054178A /* UserLinks.swift in Sources */,
+				03C85819290580300054178A /* Ancestry.swift in Sources */,
+				03C85835290585F20054178A /* BaseViewController.swift in Sources */,
+				03C858272905818F0054178A /* ColorOfWater.swift in Sources */,
+				03C8581329057FA80054178A /* ResultLinks.swift in Sources */,
+				03C8580B29057E8C0054178A /* HouseService.swift in Sources */,
 				03C85803290579410054178A /* APIManager.swift in Sources */,
 				03C857FF290575F60054178A /* MainCoordinator.swift in Sources */,
+				03C85821290581340054178A /* ProfileImage.swift in Sources */,
+				03C8582F290582AF0054178A /* JSONAny.swift in Sources */,
 				03C85805290579840054178A /* EndPoint.swift in Sources */,
+				03C8581129057F790054178A /* PhotoQueryItem.swift in Sources */,
+				03C85833290583370054178A /* PhotoService.swift in Sources */,
+				03C858172905801C0054178A /* Source.swift in Sources */,
+				03C85823290581520054178A /* Social.swift in Sources */,
 				03C857BB290571040054178A /* HousesController.swift in Sources */,
+				03C85825290581840054178A /* ResultTopicSubmissions.swift in Sources */,
 				03C857B7290571040054178A /* AppDelegate.swift in Sources */,
+				03C8583E290587DB0054178A /* HousesViewModelProtocol.swift in Sources */,
 				03C857FB290574370054178A /* UINavigationController.swift in Sources */,
+				03C8581529057FAF0054178A /* Tag.swift in Sources */,
 				03C85807290579940054178A /* Method.swift in Sources */,
+				03C8582D290582970054178A /* JSONNull.swift in Sources */,
+				03C8581B290580B40054178A /* Urls.swift in Sources */,
+				03C8583C290587940054178A /* HousesViewModel.swift in Sources */,
+				03C8580D29057ED40054178A /* HouseQueryItem.swift in Sources */,
+				03C858372905860B0054178A /* BaseViewModelProtocol.swift in Sources */,
+				03C8580F29057F3C0054178A /* PhotoQuery.swift in Sources */,
 				03C857B9290571040054178A /* SceneDelegate.swift in Sources */,
+				03C85845290592630054178A /* HouseViewData.swift in Sources */,
+				03C8582B290581F60054178A /* CoverPhoto.swift in Sources */,
 				03C857EE290571DD0054178A /* Constant.swift in Sources */,
+				03C8584329058E480054178A /* PhotoParams.swift in Sources */,
+				03C85829290581CB0054178A /* Category.swift in Sources */,
 				03C857FD290575EB0054178A /* Coordinator.swift in Sources */,
 				03C85809290579AB0054178A /* APIError.swift in Sources */,
+				03C8584029058A710054178A /* HouseCell.swift in Sources */,
+				03C8581D290580C90054178A /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

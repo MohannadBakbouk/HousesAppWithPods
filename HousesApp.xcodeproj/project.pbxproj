@@ -17,6 +17,8 @@
 		03C857EE290571DD0054178A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857ED290571DD0054178A /* Constant.swift */; };
 		03C857F6290573400054178A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857F5290573400054178A /* UIView.swift */; };
 		03C857FB290574370054178A /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857FA290574370054178A /* UINavigationController.swift */; };
+		03C857FD290575EB0054178A /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857FC290575EB0054178A /* Coordinator.swift */; };
+		03C857FF290575F60054178A /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857FE290575F60054178A /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		03C857ED290571DD0054178A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		03C857F5290573400054178A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		03C857FA290574370054178A /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
+		03C857FC290575EB0054178A /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		03C857FE290575F60054178A /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,8 @@
 		03C857EB290571B10054178A /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				03C857FC290575EB0054178A /* Coordinator.swift */,
+				03C857FE290575F60054178A /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -392,11 +398,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				03C857F6290573400054178A /* UIView.swift in Sources */,
+				03C857FF290575F60054178A /* MainCoordinator.swift in Sources */,
 				03C857BB290571040054178A /* HousesController.swift in Sources */,
 				03C857B7290571040054178A /* AppDelegate.swift in Sources */,
 				03C857FB290574370054178A /* UINavigationController.swift in Sources */,
 				03C857B9290571040054178A /* SceneDelegate.swift in Sources */,
 				03C857EE290571DD0054178A /* Constant.swift in Sources */,
+				03C857FD290575EB0054178A /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

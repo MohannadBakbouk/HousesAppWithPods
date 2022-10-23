@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		037430682905CFFE00FEABB7 /* HousesController+BindingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037430672905CFFE00FEABB7 /* HousesController+BindingModel.swift */; };
 		03C857B7290571040054178A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857B6290571040054178A /* AppDelegate.swift */; };
 		03C857B9290571040054178A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857B8290571040054178A /* SceneDelegate.swift */; };
 		03C857BB290571040054178A /* HousesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857BA290571040054178A /* HousesController.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		037430672905CFFE00FEABB7 /* HousesController+BindingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HousesController+BindingModel.swift"; sourceTree = "<group>"; };
 		03C857B3290571040054178A /* HousesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C857B6290571040054178A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C857B8290571040054178A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -377,6 +379,7 @@
 			children = (
 				03C8584129058A740054178A /* Cells */,
 				03C857BA290571040054178A /* HousesController.swift */,
+				037430672905CFFE00FEABB7 /* HousesController+BindingModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -690,6 +693,7 @@
 				03C85825290581840054178A /* ResultTopicSubmissions.swift in Sources */,
 				03C857B7290571040054178A /* AppDelegate.swift in Sources */,
 				03C8583E290587DB0054178A /* HousesViewModelProtocol.swift in Sources */,
+				037430682905CFFE00FEABB7 /* HousesController+BindingModel.swift in Sources */,
 				03C857FB290574370054178A /* UINavigationController.swift in Sources */,
 				03C8581529057FAF0054178A /* Tag.swift in Sources */,
 				03C85807290579940054178A /* Method.swift in Sources */,

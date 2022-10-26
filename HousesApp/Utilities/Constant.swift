@@ -21,4 +21,11 @@ enum PhotoAPI {
 enum Images {
     static let exclamationmark = "exclamationmark.circle.fill"
     static let mapPin = "mappin.and.ellipse"
+    static let leftArrow = "left_arrow"
+    static let circle = "dot.circle.fill"
+}
+
+enum Messages {
+    static let noResults = "There are no data to display"
+    static let noTitle = "Default Title"
 }

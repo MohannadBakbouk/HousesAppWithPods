@@ -7,15 +7,21 @@
 import Foundation
 
 struct HouseViewData {
-    var photoUrl : String
+    var photo : PhotoViewData
     var name : String
     var region : String
+    var arms : String
+    var titles : [String]
+    var actors : [String]
 }
 
 extension HouseViewData {
     init(info : HouseQueryItem , photo : PhotoQueryItem) {
         self.name = info.name
         self.region = info.region
-        self.photoUrl = photo.urls.small
+        self.arms = info.coatOfArms
+        self.titles = info.titles
+        self.actors = info.swornMembers.map{String($0.split(separator: Character("/")).last ?? "")}
+        self.photo = PhotoViewData(with: photo)
     }
 }

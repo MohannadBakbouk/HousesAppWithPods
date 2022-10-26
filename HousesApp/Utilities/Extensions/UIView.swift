@@ -28,5 +28,10 @@ extension UIView {
         mask.path = path.cgPath
         self.layer.mask = mask
     }
+    
+    func border(_ width: CGFloat, color: UIColor = UIColor.systemGray){
+        self.layer.borderColor = color.cgColor
+        self.layer.borderWidth = width
+    }
 }
 

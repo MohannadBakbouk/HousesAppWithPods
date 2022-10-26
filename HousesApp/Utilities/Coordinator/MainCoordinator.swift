@@ -23,6 +23,12 @@ final class MainCoordinator: Coordinator{
         pushViewControllerToStack(with: housesView)
     }
     
+    func showHouseDetails(with value : HouseViewData){
+        let housesDetailsView = HouseDetailsController(viewModel: HouseDetailsViewModel(info: value, photoService: PhotoService(), actorService: ActorService()))
+        housesDetailsView.coordinator = self
+        pushViewControllerToStack(with: housesDetailsView)
+    }
+    
     func back() {
         navigationController.popViewController(animated: true)
     }

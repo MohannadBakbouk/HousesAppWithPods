@@ -40,4 +40,8 @@ extension UICollectionView{
             maker.top.equalTo(imgView.snp.bottom).offset(10)
         }
     }
+    
+    func hideMessage(){
+        self.backgroundView = nil
+    }
 }

@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0334A36C2908790000C4EAAE /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0334A36B2908790000C4EAAE /* TitleCell.swift */; };
 		037430682905CFFE00FEABB7 /* HousesController+BindingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037430672905CFFE00FEABB7 /* HousesController+BindingModel.swift */; };
+		0374306E2905D33700FEABB7 /* HouseDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374306D2905D33700FEABB7 /* HouseDetailsController.swift */; };
+		037430702905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374306F2905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift */; };
+		037430722905D35C00FEABB7 /* HouseDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037430712905D35C00FEABB7 /* HouseDetailsViewModel.swift */; };
+		0376F56D290719EC00EB598D /* PhotoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F56C290719EC00EB598D /* PhotoViewData.swift */; };
+		0376F56F29071D5600EB598D /* BasePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F56E29071D5600EB598D /* BasePhotoCell.swift */; };
+		0376F5712907253000EB598D /* ActorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F5702907253000EB598D /* ActorCell.swift */; };
+		0376F5732907257E00EB598D /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F5722907257E00EB598D /* PhotoCell.swift */; };
+		0376F57529072D1600EB598D /* ActorQueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F57429072D1600EB598D /* ActorQueryItem.swift */; };
+		0376F57729072D4E00EB598D /* ActorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F57629072D4E00EB598D /* ActorService.swift */; };
+		0376F57A2907390100EB598D /* ActorViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F5792907390100EB598D /* ActorViewData.swift */; };
 		03C857B7290571040054178A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857B6290571040054178A /* AppDelegate.swift */; };
 		03C857B9290571040054178A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857B8290571040054178A /* SceneDelegate.swift */; };
 		03C857BB290571040054178A /* HousesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857BA290571040054178A /* HousesController.swift */; };
@@ -78,7 +89,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0334A36B2908790000C4EAAE /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		037430672905CFFE00FEABB7 /* HousesController+BindingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HousesController+BindingModel.swift"; sourceTree = "<group>"; };
+		0374306D2905D33700FEABB7 /* HouseDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsController.swift; sourceTree = "<group>"; };
+		0374306F2905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewModelProtocol.swift; sourceTree = "<group>"; };
+		037430712905D35C00FEABB7 /* HouseDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewModel.swift; sourceTree = "<group>"; };
+		0376F56C290719EC00EB598D /* PhotoViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewData.swift; sourceTree = "<group>"; };
+		0376F56E29071D5600EB598D /* BasePhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePhotoCell.swift; sourceTree = "<group>"; };
+		0376F5702907253000EB598D /* ActorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCell.swift; sourceTree = "<group>"; };
+		0376F5722907257E00EB598D /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		0376F57429072D1600EB598D /* ActorQueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorQueryItem.swift; sourceTree = "<group>"; };
+		0376F57629072D4E00EB598D /* ActorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorService.swift; sourceTree = "<group>"; };
+		0376F5792907390100EB598D /* ActorViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorViewData.swift; sourceTree = "<group>"; };
 		03C857B3290571040054178A /* HousesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C857B6290571040054178A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C857B8290571040054178A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +193,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		037430692905D2DE00FEABB7 /* HouseDetails */ = {
+			isa = PBXGroup;
+			children = (
+				0376F578290738EA00EB598D /* Model */,
+				0374306C2905D2F900FEABB7 /* ViewModel */,
+				0374306A2905D2EB00FEABB7 /* Views */,
+			);
+			path = HouseDetails;
+			sourceTree = "<group>";
+		};
+		0374306A2905D2EB00FEABB7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0374306B2905D2F100FEABB7 /* Cells */,
+				0374306D2905D33700FEABB7 /* HouseDetailsController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0374306B2905D2F100FEABB7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0376F56E29071D5600EB598D /* BasePhotoCell.swift */,
+				0376F5722907257E00EB598D /* PhotoCell.swift */,
+				0376F5702907253000EB598D /* ActorCell.swift */,
+				0334A36B2908790000C4EAAE /* TitleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0374306C2905D2F900FEABB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0374306F2905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift */,
+				037430712905D35C00FEABB7 /* HouseDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0376F578290738EA00EB598D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0376F5792907390100EB598D /* ActorViewData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		03C857AA290571040054178A = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +319,7 @@
 		03C857E8290571430054178A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				037430692905D2DE00FEABB7 /* HouseDetails */,
 				03C857F0290572120054178A /* Houses */,
 				03C857EF290572090054178A /* Splash */,
 			);
@@ -335,6 +405,7 @@
 			children = (
 				03C8580A29057E8C0054178A /* HouseService.swift */,
 				03C85832290583370054178A /* PhotoService.swift */,
+				0376F57629072D4E00EB598D /* ActorService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -361,6 +432,7 @@
 				03C8582C290582970054178A /* JSONNull.swift */,
 				03C8582E290582AF0054178A /* JSONAny.swift */,
 				03C85830290582F10054178A /* JSONCodingKey.swift */,
+				0376F57429072D1600EB598D /* ActorQueryItem.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -370,6 +442,7 @@
 			children = (
 				03C8584229058E480054178A /* PhotoParams.swift */,
 				03C85844290592630054178A /* HouseViewData.swift */,
+				0376F56C290719EC00EB598D /* PhotoViewData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -672,6 +745,7 @@
 				03C8584729059B1B0054178A /* UICollectionView.swift in Sources */,
 				03C857F6290573400054178A /* UIView.swift in Sources */,
 				03C8583A290587110054178A /* ErrorDataView.swift in Sources */,
+				037430702905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift in Sources */,
 				03C85831290582F10054178A /* JSONCodingKey.swift in Sources */,
 				03C85801290579350054178A /* APIManagerProtocol.swift in Sources */,
 				03C8581F290580FB0054178A /* UserLinks.swift in Sources */,
@@ -679,8 +753,11 @@
 				03C85835290585F20054178A /* BaseViewController.swift in Sources */,
 				03C858272905818F0054178A /* ColorOfWater.swift in Sources */,
 				03C8581329057FA80054178A /* ResultLinks.swift in Sources */,
+				0376F57729072D4E00EB598D /* ActorService.swift in Sources */,
+				0334A36C2908790000C4EAAE /* TitleCell.swift in Sources */,
 				03C8580B29057E8C0054178A /* HouseService.swift in Sources */,
 				03C85803290579410054178A /* APIManager.swift in Sources */,
+				0376F56D290719EC00EB598D /* PhotoViewData.swift in Sources */,
 				03C857FF290575F60054178A /* MainCoordinator.swift in Sources */,
 				03C85821290581340054178A /* ProfileImage.swift in Sources */,
 				03C8582F290582AF0054178A /* JSONAny.swift in Sources */,
@@ -689,19 +766,24 @@
 				03C85833290583370054178A /* PhotoService.swift in Sources */,
 				03C858172905801C0054178A /* Source.swift in Sources */,
 				03C85823290581520054178A /* Social.swift in Sources */,
+				0376F5732907257E00EB598D /* PhotoCell.swift in Sources */,
 				03C857BB290571040054178A /* HousesController.swift in Sources */,
 				03C85825290581840054178A /* ResultTopicSubmissions.swift in Sources */,
 				03C857B7290571040054178A /* AppDelegate.swift in Sources */,
 				03C8583E290587DB0054178A /* HousesViewModelProtocol.swift in Sources */,
 				037430682905CFFE00FEABB7 /* HousesController+BindingModel.swift in Sources */,
 				03C857FB290574370054178A /* UINavigationController.swift in Sources */,
+				0376F56F29071D5600EB598D /* BasePhotoCell.swift in Sources */,
 				03C8581529057FAF0054178A /* Tag.swift in Sources */,
 				03C85807290579940054178A /* Method.swift in Sources */,
+				037430722905D35C00FEABB7 /* HouseDetailsViewModel.swift in Sources */,
 				03C8582D290582970054178A /* JSONNull.swift in Sources */,
+				0376F5712907253000EB598D /* ActorCell.swift in Sources */,
 				03C8581B290580B40054178A /* Urls.swift in Sources */,
 				03C8583C290587940054178A /* HousesViewModel.swift in Sources */,
 				03C8580D29057ED40054178A /* HouseQueryItem.swift in Sources */,
 				03C858372905860B0054178A /* BaseViewModelProtocol.swift in Sources */,
+				0374306E2905D33700FEABB7 /* HouseDetailsController.swift in Sources */,
 				03C8580F29057F3C0054178A /* PhotoQuery.swift in Sources */,
 				03C857B9290571040054178A /* SceneDelegate.swift in Sources */,
 				03C85845290592630054178A /* HouseViewData.swift in Sources */,
@@ -711,6 +793,8 @@
 				03C85829290581CB0054178A /* Category.swift in Sources */,
 				03C857FD290575EB0054178A /* Coordinator.swift in Sources */,
 				03C85809290579AB0054178A /* APIError.swift in Sources */,
+				0376F57A2907390100EB598D /* ActorViewData.swift in Sources */,
+				0376F57529072D1600EB598D /* ActorQueryItem.swift in Sources */,
 				03C8584029058A710054178A /* HouseCell.swift in Sources */,
 				03C8581D290580C90054178A /* User.swift in Sources */,
 			);

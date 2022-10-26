@@ -98,7 +98,8 @@ extension HousesController: UICollectionViewDelegate , UICollectionViewDelegateF
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let selected = viewModel.houses.value[indexPath.row]
+        coordinator?.showHouseDetails(with: selected)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

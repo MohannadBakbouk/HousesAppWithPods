@@ -38,7 +38,7 @@ final class HouseCell: UICollectionViewCell {
     
     private var addressImageView: UIImageView = {
         let img = UIImageView(image: UIImage(systemName: Images.mapPin))
-        img.tintColor = .systemGray2
+        img.tintColor = .black
         img.isSkeletonable = true
         return img
      }()
@@ -130,7 +130,7 @@ final class HouseCell: UICollectionViewCell {
     func configure(with model : HouseViewData){
         nameLabel.text = model.name
         addressLabel.text = model.region
-        guard let url = URL(string: model.photoUrl) else { return}
+        guard let url = URL(string: model.photo.mainUrl) else { return}
         photoView.kf.setImage(with: url)
     }
 }

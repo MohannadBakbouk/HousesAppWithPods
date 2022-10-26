@@ -24,6 +24,3 @@ struct PhotoParams {
          "per_page" : perPage]
     }
 }
-
-
-

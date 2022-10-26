@@ -35,8 +35,9 @@ final class HousesViewModel : HousesViewModelProtocol{
             self?.isLoading.send(false)
             self?.error.send(ErrorDataView(with: error))
         } receiveValue: {[weak self] (houses , photos) in
-            let items = zip(houses, photos.results).map{HouseViewData(info: $0, photo: $1)}
+            var items = zip(houses, photos.results).map{HouseViewData(info: $0, photo: $1)}
             self?.isLoading.send(false)
+            items.sort{$0.actors.count > $1.actors.count}
             self?.houses.send(items)
         }.store(in: &cancellables)
     }

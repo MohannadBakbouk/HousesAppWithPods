@@ -337,3 +337,37 @@ extension HouseDetailsController: UITableViewDataSource , UITableViewDelegate{
         return 50
     }
 }
+
+extension HouseDetailsController {
+    func bindingDetailsToViews(){
+        viewModel.details
+        .sink {[weak self] info in
+            self?.armsValueLabel.text = info.arms
+            guard let url = URL(string: info.photo.mainUrl) else {return}
+            self?.pictureView.kf.setImage(with: url)
+        }.store(in: &cancellables)
+    }
+    
+    func bindingGallaryToCollection(){
+        viewModel.gallery
+        .receive(on: DispatchQueue.main)
+        .sink {[weak self] items in
+            self?.gallryCollectionView.reloadData()
+            self?.gallryCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
+        }.store(in: &cancellables)
+    }
+    
+    func bindingActorToCollection(){
+        viewModel.actors
+        .receive(on: DispatchQueue.main)
+        .sink {[weak self] items in
+            guard items.count > 0  else {
+                self?.actorsCollectionView.reloadData()
+                self?.actorsCollectionView.setMessage(Messages.noResults)
+                return
+            }
+            self?.actorsCollectionView.hideMessage()
+            self?.actorsCollectionView.reloadData()
+        }.store(in: &cancellables)
+    }
+}

@@ -8,18 +8,17 @@ import Foundation
 // MARK: - CoverPhoto
 struct CoverPhoto: Codable {
     let id: String
-    let createdAt, updatedAt, promotedAt: String
+    let createdAt, updatedAt, promotedAt: String?
     let width, height: Int
-    let color, blurHash, coverPhotoDescription, altDescription: String
+    let color, blurHash, coverPhotoDescription, altDescription: String?
     let urls: Urls
     let links: ResultLinks
     let likes: Int
     let likedByUser: Bool
     let currentUserCollections: [JSONAny]
-    let sponsorship: JSONNull?
-    let topicSubmissions: CoverPhotoTopicSubmissions
+    let topicSubmissions: CoverPhotoTopicSubmissions?
     let premium: Bool
-    let user: User
+    let user: User?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -33,7 +32,6 @@ struct CoverPhoto: Codable {
         case urls, links, likes
         case likedByUser = "liked_by_user"
         case currentUserCollections = "current_user_collections"
-        case sponsorship
         case topicSubmissions = "topic_submissions"
         case premium, user
     }

@@ -7,5 +7,5 @@
 import Foundation
 // MARK: - Ancestry
 struct Ancestry: Codable {
-    let type, category, subcategory: Category
+    let type, category, subcategory: Category?
 }

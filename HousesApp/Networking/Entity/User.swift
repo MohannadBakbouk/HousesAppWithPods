@@ -8,18 +8,18 @@ import Foundation
 // MARK: - User
 struct User: Codable {
     let id: String
-    let updatedAt: String
+    let updatedAt: String?
     let username, name, firstName, lastName: String?
     let twitterUsername: String?
     let portfolioURL: String?
     let bio: String?
     let location: String?
-    let links: UserLinks
-    let profileImage: ProfileImage
+    let links: UserLinks?
+    let profileImage: ProfileImage?
     let instagramUsername: String?
     let totalCollections, totalLikes, totalPhotos: Int
     let acceptedTos, forHire: Bool
-    let social: Social
+    let social: Social?
 
     enum CodingKeys: String, CodingKey {
         case id

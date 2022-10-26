@@ -7,6 +7,6 @@
 import Foundation
 // MARK: - Tag
 struct Tag: Codable {
-    let type, title: String
+    let type, title: String?
     let source: Source?
 }

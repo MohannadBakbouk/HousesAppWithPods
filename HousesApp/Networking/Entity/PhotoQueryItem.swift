@@ -11,18 +11,17 @@ struct PhotoQueryItem: Codable {
     let createdAt, updatedAt: String
     let promotedAt: String?
     let width, height: Int
-    let color, blurHash: String
+    let color, blurHash: String?
     let resultDescription: String?
-    let altDescription: String
+    let altDescription: String?
     let urls: Urls
     let links: ResultLinks
     let likes: Int
     let likedByUser: Bool
     let currentUserCollections: [JSONAny]
-    let sponsorship: JSONNull?
     let topicSubmissions: ResultTopicSubmissions
-    let user: User
-    let tags: [Tag]
+    let user: User?
+    let tags: [Tag]?
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -36,7 +35,6 @@ struct PhotoQueryItem: Codable {
         case urls, links, likes
         case likedByUser = "liked_by_user"
         case currentUserCollections = "current_user_collections"
-        case sponsorship
         case topicSubmissions = "topic_submissions"
         case user, tags
     }

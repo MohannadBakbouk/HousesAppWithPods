@@ -29,6 +29,7 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         img.contentMode = .scaleToFill
         img.layer.cornerRadius = 8.0
         img.clipsToBounds = true
+        img.accessibilityIdentifier = "SelectedGalleryPicture"
         return img
     }()
     
@@ -38,6 +39,7 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         collection.allowsMultipleSelection = false
         collection.showsHorizontalScrollIndicator = false
         collection.showsVerticalScrollIndicator = false
+        collection.accessibilityIdentifier = "GalleryCollection"
         return collection
     }()
     
@@ -72,6 +74,7 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         collection.allowsMultipleSelection = false
         collection.showsHorizontalScrollIndicator = false
         collection.showsVerticalScrollIndicator = false
+        collection.accessibilityIdentifier = "actorsCollection"
         return collection
     }()
     
@@ -133,6 +136,7 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = 50
         table.separatorStyle = .none
+        table.accessibilityIdentifier = "TitlesTableView"
         return table
     }()
     

@@ -16,6 +16,7 @@ final class HouseCell: UICollectionViewCell {
         img.kf.indicatorType = .activity
         img.layer.masksToBounds = true
         img.isSkeletonable = true
+        img.accessibilityIdentifier = "houseImageView"
         return img
      }()
     
@@ -40,6 +41,7 @@ final class HouseCell: UICollectionViewCell {
         let img = UIImageView(image: UIImage(systemName: Images.mapPin))
         img.tintColor = .black
         img.isSkeletonable = true
+        img.accessibilityIdentifier = "addressImageView"
         return img
      }()
     

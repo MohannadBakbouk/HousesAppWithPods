@@ -18,6 +18,7 @@ final class HousesController: BaseViewController<HousesViewModel> {
         collection.allowsMultipleSelection = false
         collection.showsHorizontalScrollIndicator = false
         collection.showsVerticalScrollIndicator = false
+        collection.accessibilityIdentifier = "HouseCollectionView"
         return collection
     }()
     
@@ -87,7 +88,9 @@ extension HousesController: SkeletonCollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HouseCell.self), for: indexPath) as! HouseCell
-        cell.configure(with: viewModel.houses.value[indexPath.row])
+        let model = viewModel.houses.value[indexPath.row]
+        cell.configure(with: model)
+        cell.accessibilityIdentifier = "HouseCell_\(model.id)"
         return cell
     }
 }

@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0307DD82290B2C0A0060A951 /* HousesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0307DD81290B2C0A0060A951 /* HousesResponse.json */; };
+		0307DD85290B2FCA0060A951 /* TestUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0307DD84290B2FCA0060A951 /* TestUtil.swift */; };
+		0307DD87290B34C60060A951 /* HousePhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0307DD86290B34C60060A951 /* HousePhotosResponse.json */; };
+		0310EBD5290BFD3000F806A1 /* SuperXCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310EBD4290BFD3000F806A1 /* SuperXCTestCase.swift */; };
+		0310EBD7290C042A00F806A1 /* HouseDetailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310EBD6290C042A00F806A1 /* HouseDetailsUITests.swift */; };
 		0334A36C2908790000C4EAAE /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0334A36B2908790000C4EAAE /* TitleCell.swift */; };
+		036187A4290C68E800BCBC3A /* PersonPhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */; };
+		036187A6290C690000BCBC3A /* Actor1880Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A5290C690000BCBC3A /* Actor1880Response.json */; };
+		036187A8290C691500BCBC3A /* Actor1881Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A7290C691500BCBC3A /* Actor1881Response.json */; };
+		036187AA290C692800BCBC3A /* Actor1882Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A9290C692800BCBC3A /* Actor1882Response.json */; };
 		037430682905CFFE00FEABB7 /* HousesController+BindingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037430672905CFFE00FEABB7 /* HousesController+BindingModel.swift */; };
 		0374306E2905D33700FEABB7 /* HouseDetailsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374306D2905D33700FEABB7 /* HouseDetailsController.swift */; };
 		037430702905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374306F2905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift */; };
@@ -19,13 +28,25 @@
 		0376F57529072D1600EB598D /* ActorQueryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F57429072D1600EB598D /* ActorQueryItem.swift */; };
 		0376F57729072D4E00EB598D /* ActorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F57629072D4E00EB598D /* ActorService.swift */; };
 		0376F57A2907390100EB598D /* ActorViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0376F5792907390100EB598D /* ActorViewData.swift */; };
+		03841838290B0DB600B4A2BE /* ActualServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03841837290B0DB600B4A2BE /* ActualServicesTests.swift */; };
+		0385D4092909C027006BAE91 /* MockHouseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385D4082909C027006BAE91 /* MockHouseService.swift */; };
+		0385D40B2909C1AE006BAE91 /* HousesResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0385D40A2909C1AE006BAE91 /* HousesResponse.json */; };
+		0385D40D2909C277006BAE91 /* HousePhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0385D40C2909C277006BAE91 /* HousePhotosResponse.json */; };
+		0385D40F2909C949006BAE91 /* MockPhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385D40E2909C949006BAE91 /* MockPhotoService.swift */; };
+		0385D4122909CB3E006BAE91 /* HousesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385D4112909CB3E006BAE91 /* HousesViewModelTests.swift */; };
+		0385D4142909D5A2006BAE91 /* MockActorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385D4132909D5A2006BAE91 /* MockActorService.swift */; };
+		0385D4162909D6A9006BAE91 /* Actor1880Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 0385D4152909D6A9006BAE91 /* Actor1880Response.json */; };
+		0385D4182909D6DB006BAE91 /* Actor1881Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 0385D4172909D6DB006BAE91 /* Actor1881Response.json */; };
+		0385D41A2909D715006BAE91 /* Actor1882Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 0385D4192909D715006BAE91 /* Actor1882Response.json */; };
+		0385D41C2909D769006BAE91 /* PersonPhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0385D41B2909D769006BAE91 /* PersonPhotosResponse.json */; };
+		0385D41E2909DC97006BAE91 /* HouseDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385D41D2909DC97006BAE91 /* HouseDetailsViewModelTests.swift */; };
 		03C857B7290571040054178A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857B6290571040054178A /* AppDelegate.swift */; };
 		03C857B9290571040054178A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857B8290571040054178A /* SceneDelegate.swift */; };
 		03C857BB290571040054178A /* HousesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857BA290571040054178A /* HousesController.swift */; };
 		03C857C0290571050054178A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03C857BF290571050054178A /* Assets.xcassets */; };
 		03C857C3290571050054178A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03C857C1290571050054178A /* LaunchScreen.storyboard */; };
-		03C857CE290571050054178A /* HousesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857CD290571050054178A /* HousesAppTests.swift */; };
-		03C857D9290571050054178A /* HousesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857D8290571050054178A /* HousesAppUITests.swift */; };
+		03C857CE290571050054178A /* MockServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857CD290571050054178A /* MockServicesTests.swift */; };
+		03C857D9290571050054178A /* HousesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857D8290571050054178A /* HousesUITests.swift */; };
 		03C857EE290571DD0054178A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857ED290571DD0054178A /* Constant.swift */; };
 		03C857F6290573400054178A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857F5290573400054178A /* UIView.swift */; };
 		03C857FB290574370054178A /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857FA290574370054178A /* UINavigationController.swift */; };
@@ -89,7 +110,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0307DD81290B2C0A0060A951 /* HousesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HousesResponse.json; sourceTree = "<group>"; };
+		0307DD84290B2FCA0060A951 /* TestUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtil.swift; sourceTree = "<group>"; };
+		0307DD86290B34C60060A951 /* HousePhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HousePhotosResponse.json; sourceTree = "<group>"; };
+		0310EBD4290BFD3000F806A1 /* SuperXCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperXCTestCase.swift; sourceTree = "<group>"; };
+		0310EBD6290C042A00F806A1 /* HouseDetailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsUITests.swift; sourceTree = "<group>"; };
 		0334A36B2908790000C4EAAE /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PersonPhotosResponse.json; sourceTree = "<group>"; };
+		036187A5290C690000BCBC3A /* Actor1880Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1880Response.json; sourceTree = "<group>"; };
+		036187A7290C691500BCBC3A /* Actor1881Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1881Response.json; sourceTree = "<group>"; };
+		036187A9290C692800BCBC3A /* Actor1882Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1882Response.json; sourceTree = "<group>"; };
 		037430672905CFFE00FEABB7 /* HousesController+BindingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HousesController+BindingModel.swift"; sourceTree = "<group>"; };
 		0374306D2905D33700FEABB7 /* HouseDetailsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsController.swift; sourceTree = "<group>"; };
 		0374306F2905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -101,6 +131,18 @@
 		0376F57429072D1600EB598D /* ActorQueryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorQueryItem.swift; sourceTree = "<group>"; };
 		0376F57629072D4E00EB598D /* ActorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorService.swift; sourceTree = "<group>"; };
 		0376F5792907390100EB598D /* ActorViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorViewData.swift; sourceTree = "<group>"; };
+		03841837290B0DB600B4A2BE /* ActualServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActualServicesTests.swift; sourceTree = "<group>"; };
+		0385D4082909C027006BAE91 /* MockHouseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHouseService.swift; sourceTree = "<group>"; };
+		0385D40A2909C1AE006BAE91 /* HousesResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HousesResponse.json; sourceTree = "<group>"; };
+		0385D40C2909C277006BAE91 /* HousePhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = HousePhotosResponse.json; sourceTree = "<group>"; };
+		0385D40E2909C949006BAE91 /* MockPhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoService.swift; sourceTree = "<group>"; };
+		0385D4112909CB3E006BAE91 /* HousesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesViewModelTests.swift; sourceTree = "<group>"; };
+		0385D4132909D5A2006BAE91 /* MockActorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockActorService.swift; sourceTree = "<group>"; };
+		0385D4152909D6A9006BAE91 /* Actor1880Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1880Response.json; sourceTree = "<group>"; };
+		0385D4172909D6DB006BAE91 /* Actor1881Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1881Response.json; sourceTree = "<group>"; };
+		0385D4192909D715006BAE91 /* Actor1882Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1882Response.json; sourceTree = "<group>"; };
+		0385D41B2909D769006BAE91 /* PersonPhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PersonPhotosResponse.json; sourceTree = "<group>"; };
+		0385D41D2909DC97006BAE91 /* HouseDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		03C857B3290571040054178A /* HousesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C857B6290571040054178A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C857B8290571040054178A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,10 +151,10 @@
 		03C857C2290571050054178A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03C857C4290571050054178A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C857C9290571050054178A /* HousesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HousesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C857CD290571050054178A /* HousesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesAppTests.swift; sourceTree = "<group>"; };
+		03C857CD290571050054178A /* MockServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServicesTests.swift; sourceTree = "<group>"; };
 		03C857CF290571050054178A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C857D4290571050054178A /* HousesAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HousesAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		03C857D8290571050054178A /* HousesAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesAppUITests.swift; sourceTree = "<group>"; };
+		03C857D8290571050054178A /* HousesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesUITests.swift; sourceTree = "<group>"; };
 		03C857DA290571050054178A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03C857ED290571DD0054178A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		03C857F5290573400054178A /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
@@ -193,6 +235,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0307DD83290B2F3A0060A951 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				0307DD81290B2C0A0060A951 /* HousesResponse.json */,
+				0307DD86290B34C60060A951 /* HousePhotosResponse.json */,
+				036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */,
+				036187A5290C690000BCBC3A /* Actor1880Response.json */,
+				036187A7290C691500BCBC3A /* Actor1881Response.json */,
+				036187A9290C692800BCBC3A /* Actor1882Response.json */,
+				0307DD84290B2FCA0060A951 /* TestUtil.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
 		037430692905D2DE00FEABB7 /* HouseDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,6 +296,34 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		03841839290B0E4900B4A2BE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				03841837290B0DB600B4A2BE /* ActualServicesTests.swift */,
+				03C857CD290571050054178A /* MockServicesTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		0385D4072909BFE7006BAE91 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0385D4082909C027006BAE91 /* MockHouseService.swift */,
+				0385D40E2909C949006BAE91 /* MockPhotoService.swift */,
+				0385D4132909D5A2006BAE91 /* MockActorService.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		0385D4102909CAFE006BAE91 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0385D4112909CB3E006BAE91 /* HousesViewModelTests.swift */,
+				0385D41D2909DC97006BAE91 /* HouseDetailsViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		03C857AA290571040054178A = {
 			isa = PBXGroup;
 			children = (
@@ -277,7 +361,9 @@
 		03C857CC290571050054178A /* HousesAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				03C857CD290571050054178A /* HousesAppTests.swift */,
+				0385D4072909BFE7006BAE91 /* Mock */,
+				0385D4102909CAFE006BAE91 /* ViewModels */,
+				03841839290B0E4900B4A2BE /* Services */,
 				03C857CF290571050054178A /* Info.plist */,
 			);
 			path = HousesAppTests;
@@ -286,7 +372,10 @@
 		03C857D7290571050054178A /* HousesAppUITests */ = {
 			isa = PBXGroup;
 			children = (
-				03C857D8290571050054178A /* HousesAppUITests.swift */,
+				0307DD83290B2F3A0060A951 /* JSON */,
+				03C857D8290571050054178A /* HousesUITests.swift */,
+				0310EBD6290C042A00F806A1 /* HouseDetailsUITests.swift */,
+				0310EBD4290BFD3000F806A1 /* SuperXCTestCase.swift */,
 				03C857DA290571050054178A /* Info.plist */,
 			);
 			path = HousesAppUITests;
@@ -340,6 +429,12 @@
 			isa = PBXGroup;
 			children = (
 				03C857BF290571050054178A /* Assets.xcassets */,
+				0385D40A2909C1AE006BAE91 /* HousesResponse.json */,
+				0385D40C2909C277006BAE91 /* HousePhotosResponse.json */,
+				0385D41B2909D769006BAE91 /* PersonPhotosResponse.json */,
+				0385D4152909D6A9006BAE91 /* Actor1880Response.json */,
+				0385D4172909D6DB006BAE91 /* Actor1881Response.json */,
+				0385D4192909D715006BAE91 /* Actor1882Response.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -613,8 +708,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0385D40D2909C277006BAE91 /* HousePhotosResponse.json in Resources */,
+				0385D4162909D6A9006BAE91 /* Actor1880Response.json in Resources */,
+				0385D4182909D6DB006BAE91 /* Actor1881Response.json in Resources */,
+				0385D40B2909C1AE006BAE91 /* HousesResponse.json in Resources */,
 				03C857C3290571050054178A /* LaunchScreen.storyboard in Resources */,
+				0385D41A2909D715006BAE91 /* Actor1882Response.json in Resources */,
 				03C857C0290571050054178A /* Assets.xcassets in Resources */,
+				0385D41C2909D769006BAE91 /* PersonPhotosResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +730,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0307DD87290B34C60060A951 /* HousePhotosResponse.json in Resources */,
+				036187A4290C68E800BCBC3A /* PersonPhotosResponse.json in Resources */,
+				0307DD82290B2C0A0060A951 /* HousesResponse.json in Resources */,
+				036187AA290C692800BCBC3A /* Actor1882Response.json in Resources */,
+				036187A6290C690000BCBC3A /* Actor1880Response.json in Resources */,
+				036187A8290C691500BCBC3A /* Actor1881Response.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,7 +911,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C857CE290571050054178A /* HousesAppTests.swift in Sources */,
+				03841838290B0DB600B4A2BE /* ActualServicesTests.swift in Sources */,
+				0385D40F2909C949006BAE91 /* MockPhotoService.swift in Sources */,
+				0385D4092909C027006BAE91 /* MockHouseService.swift in Sources */,
+				03C857CE290571050054178A /* MockServicesTests.swift in Sources */,
+				0385D4142909D5A2006BAE91 /* MockActorService.swift in Sources */,
+				0385D41E2909DC97006BAE91 /* HouseDetailsViewModelTests.swift in Sources */,
+				0385D4122909CB3E006BAE91 /* HousesViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,7 +925,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03C857D9290571050054178A /* HousesAppUITests.swift in Sources */,
+				0310EBD5290BFD3000F806A1 /* SuperXCTestCase.swift in Sources */,
+				03C857D9290571050054178A /* HousesUITests.swift in Sources */,
+				0307DD85290B2FCA0060A951 /* TestUtil.swift in Sources */,
+				0310EBD7290C042A00F806A1 /* HouseDetailsUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -971,7 +1087,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Moh.HousesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HousesApp.Identifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -990,7 +1106,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Moh.HousesApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HousesApp.Identifier;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

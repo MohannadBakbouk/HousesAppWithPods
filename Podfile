@@ -20,7 +20,7 @@ target 'HousesApp' do
   end
 
   target 'HousesAppUITests' do
-    # Pods for testing
+    pod 'Swifter', '~> 1.5.0'
   end
 
 end

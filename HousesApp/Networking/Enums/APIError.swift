@@ -5,7 +5,6 @@
 //  Created by Mohannad on 10/23/22.
 //
 import Foundation
-
 enum APIError : Error {
     case server
     case parse

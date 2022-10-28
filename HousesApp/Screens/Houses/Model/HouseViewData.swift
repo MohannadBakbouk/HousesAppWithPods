@@ -13,6 +13,7 @@ struct HouseViewData {
     var arms : String
     var titles : [String]
     var actors : [String]
+    var id : String
 }
 
 extension HouseViewData {
@@ -22,6 +23,7 @@ extension HouseViewData {
         self.arms = info.coatOfArms
         self.titles = info.titles
         self.actors = info.swornMembers.map{String($0.split(separator: Character("/")).last ?? "")}
+        self.id = String(info.url.split(separator: Character("/")).last ?? "-1")
         self.photo = PhotoViewData(with: photo)
     }
 }

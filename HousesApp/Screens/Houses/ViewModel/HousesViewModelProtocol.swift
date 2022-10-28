@@ -8,4 +8,5 @@ import Combine
 
 protocol HousesViewModelProtocol: BaseViewModelProtocol {
     var houses : CurrentValueSubject<[HouseViewData] , Never> {get}
+    func loadHouses()
 }

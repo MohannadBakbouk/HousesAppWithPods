@@ -13,4 +13,6 @@ protocol HouseDetailsViewModelProtocol: BaseViewModelProtocol {
     var actors: CurrentValueSubject<[ActorViewData] , Never> {get}
     var rawActors: CurrentValueSubject<[ActorQueryItem], Never> {get}
     var actorsPhotos: CurrentValueSubject<[PhotoViewData], Never> {get}
+    func loadHousePhotos()
+    func loadActors()
 }

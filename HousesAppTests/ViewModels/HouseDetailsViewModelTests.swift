@@ -58,7 +58,7 @@ class HouseDetailsViewModelTests: XCTestCase {
         viewModel.actors.sink { completed in
             expectation.fulfill()
         } receiveValue: { value in
-            results.append(contentsOf: value)
+            results.append(contentsOf: value ?? [])
         }.store(in: &cancellables)
         viewModel.loadActors()
         

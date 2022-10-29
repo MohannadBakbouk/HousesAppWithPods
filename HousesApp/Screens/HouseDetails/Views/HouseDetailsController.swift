@@ -24,48 +24,9 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         return view
     }()
     
-    private var pictureView : UIImageView = {
-        let img = UIImageView()
-        img.contentMode = .scaleToFill
-        img.layer.cornerRadius = 8.0
-        img.clipsToBounds = true
-        img.accessibilityIdentifier = "SelectedGalleryPicture"
-        return img
-    }()
-    
-    private lazy var gallryCollectionView : UICollectionView = {
-        let collection = UICollectionView(frame: .zero , collectionViewLayout: collectionViewLayout)
-        collection.backgroundColor = .white
-        collection.allowsMultipleSelection = false
-        collection.showsHorizontalScrollIndicator = false
-        collection.showsVerticalScrollIndicator = false
-        collection.accessibilityIdentifier = "GalleryCollection"
-        return collection
-    }()
-    
-    private lazy var collectionViewLayout : UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 10.0
-        layout.minimumInteritemSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        return layout
-    }()
-    
-    private var galleryLabel : UILabel = {
-        let lab = UILabel()
-        lab.text = "Gallery"
-        lab.font = UIFont.boldSystemFont(ofSize: 16)
-        return lab
-    }()
-    
-    private lazy var galleryStack : UIStackView =  {
-        let stack = UIStackView(arrangedSubviews: [pictureView , galleryLabel, gallryCollectionView])
-        stack.axis = .vertical
-        stack.spacing = 12
-        stack.distribution = .fill
-        stack.alignment = .fill
-        return stack
+    private var galleryView: UIGalleryView = {
+        let galleryView = UIGalleryView()
+        return galleryView
     }()
     
     private lazy var actorsCollectionView : UICollectionView = {
@@ -185,13 +146,12 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.addSubview(container)
-        container.addSubviews(contentOf: [galleryStack , actorsStack , titleStack , armsStack])
+        container.addSubviews(contentOf: [galleryView, actorsStack, titleStack , armsStack])
         setupNavigationBar()
         setupViewsConstraints()
         setupCollectionViews()
         setupCollectionCellSize()
         setupTableview()
-        
     }
     
     private func setupNavigationBar(){
@@ -204,10 +164,6 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
     }
     
     private func setupCollectionViews(){
-        gallryCollectionView.register(PhotoCell.self, forCellWithReuseIdentifier: String(describing: PhotoCell.self))
-        gallryCollectionView.dataSource = self
-        gallryCollectionView.delegate = self
-        
         actorsCollectionView.register(ActorCell.self, forCellWithReuseIdentifier: String(describing: ActorCell.self))
         actorsCollectionView.dataSource = self
         actorsCollectionView.delegate = self
@@ -221,9 +177,6 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
     }
     
     private func setupCollectionCellSize(){
-        let width = (UIScreen.main.bounds.width) / 5
-        collectionViewLayout.itemSize = CGSize(width: width , height: 60)
-        
         let actorWidth = (UIScreen.main.bounds.width) / 1.7
         actorsCollectionViewLayout.itemSize = CGSize(width: actorWidth , height: 250)
     }
@@ -236,22 +189,13 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
             maker.height.equalTo(scrollView).priority(.low)
         }
         
-        galleryStack.snp.makeConstraints{
+        galleryView.snp.makeConstraints{
             $0.top.leading.equalTo(container).offset(10)
             $0.trailing.equalTo(container).offset(-10)
         }
         
-        pictureView.snp.makeConstraints { maker in
-            maker.width.equalTo(galleryStack.snp.width)
-            maker.height.equalTo(200)
-        }
-        
-        gallryCollectionView.snp.makeConstraints { maker in
-            maker.height.equalTo(75)
-        }
-        
         actorsStack.snp.makeConstraints{
-            $0.top.equalTo(galleryStack.snp.bottom).offset(10)
+            $0.top.equalTo(galleryView.snp.bottom).offset(10)
             $0.leading.equalTo(container).offset(10)
             $0.trailing.equalTo(container).offset(-10)
         }
@@ -291,47 +235,29 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
 
 extension HouseDetailsController: SkeletonCollectionViewDataSource  {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView == gallryCollectionView ? viewModel.gallery.value.count : (viewModel.actors.value?.count ?? 0)
+        return  (viewModel.actors.value?.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == gallryCollectionView {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: PhotoCell.self), for: indexPath) as! PhotoCell
-            cell.configure(with: viewModel.gallery.value[indexPath.row])
-            return cell
-        }
-        else {
+       
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ActorCell.self), for: indexPath) as! ActorCell
             cell.configure(with: viewModel.actors.value?[indexPath.row])
             cell.layoutIfNeeded()
             return cell
-        }
+        
     }
     
     func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return  skeletonView == gallryCollectionView ? String(describing: PhotoCell.self) : String(describing: ActorCell.self)
+        return   String(describing: ActorCell.self)
     }
     
 }
 
 extension HouseDetailsController: UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selected = viewModel.gallery.value[indexPath.row]
-        pictureView.kf.setImage(with: URL(string: selected.mainUrl)!)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if collectionView == gallryCollectionView {
-            let width = (collectionView.frame.width ) / 5
-            let hieght = (collectionView.frame.height)
-            return CGSize(width: width , height: hieght)
-        }
-        else {
             let width = (collectionView.frame.width - 10) / 1.7
             let hieght = (collectionView.frame.height - 10 )
             return CGSize(width: width , height: hieght)
-        }
     }
 }
 
@@ -356,18 +282,14 @@ extension HouseDetailsController {
         viewModel.details
         .sink {[weak self] info in
             self?.armsValueLabel.text = info.arms
-            guard let url = URL(string: info.photo.mainUrl) else {return}
-            self?.pictureView.kf.setImage(with: url)
+            self?.galleryView.showMainPicture(with: info.photo)
         }.store(in: &cancellables)
     }
     
     func bindingGallaryToCollection(){
         viewModel.gallery
-        .receive(on: DispatchQueue.main)
-        .sink {[weak self] items in
-            self?.gallryCollectionView.reloadData()
-            self?.gallryCollectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
-        }.store(in: &cancellables)
+        .assign(to: \.value, on: galleryView.items)
+        .store(in: &cancellables)
     }
     
     func bindingActorToCollection(){

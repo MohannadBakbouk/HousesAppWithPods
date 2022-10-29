@@ -13,6 +13,8 @@
 		0310EBD5290BFD3000F806A1 /* SuperXCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310EBD4290BFD3000F806A1 /* SuperXCTestCase.swift */; };
 		0310EBD7290C042A00F806A1 /* HouseDetailsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0310EBD6290C042A00F806A1 /* HouseDetailsUITests.swift */; };
 		0334A36C2908790000C4EAAE /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0334A36B2908790000C4EAAE /* TitleCell.swift */; };
+		0350B53E290DB998004D0ED5 /* UIGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B53D290DB998004D0ED5 /* UIGalleryView.swift */; };
+		0350B542290DC41E004D0ED5 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B541290DC41E004D0ED5 /* UIStackView.swift */; };
 		036187A4290C68E800BCBC3A /* PersonPhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */; };
 		036187A6290C690000BCBC3A /* Actor1880Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A5290C690000BCBC3A /* Actor1880Response.json */; };
 		036187A8290C691500BCBC3A /* Actor1881Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A7290C691500BCBC3A /* Actor1881Response.json */; };
@@ -118,6 +120,8 @@
 		0310EBD4290BFD3000F806A1 /* SuperXCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperXCTestCase.swift; sourceTree = "<group>"; };
 		0310EBD6290C042A00F806A1 /* HouseDetailsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsUITests.swift; sourceTree = "<group>"; };
 		0334A36B2908790000C4EAAE /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		0350B53D290DB998004D0ED5 /* UIGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGalleryView.swift; sourceTree = "<group>"; };
+		0350B541290DC41E004D0ED5 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PersonPhotosResponse.json; sourceTree = "<group>"; };
 		036187A5290C690000BCBC3A /* Actor1880Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1880Response.json; sourceTree = "<group>"; };
 		036187A7290C691500BCBC3A /* Actor1881Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1881Response.json; sourceTree = "<group>"; };
@@ -253,6 +257,14 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
+		0350B53C290DB971004D0ED5 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				0350B53D290DB998004D0ED5 /* UIGalleryView.swift */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
 		037430692905D2DE00FEABB7 /* HouseDetails */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +278,7 @@
 		0374306A2905D2EB00FEABB7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0350B53C290DB971004D0ED5 /* Custom */,
 				0374306B2905D2F100FEABB7 /* Cells */,
 				0374306D2905D33700FEABB7 /* HouseDetailsController.swift */,
 			);
@@ -459,6 +472,7 @@
 				03C857F5290573400054178A /* UIView.swift */,
 				03C857FA290574370054178A /* UINavigationController.swift */,
 				03C8584629059B1B0054178A /* UICollectionView.swift */,
+				0350B541290DC41E004D0ED5 /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -876,6 +890,7 @@
 				03C8582F290582AF0054178A /* JSONAny.swift in Sources */,
 				03C85805290579840054178A /* EndPoint.swift in Sources */,
 				03C8581129057F790054178A /* PhotoQueryItem.swift in Sources */,
+				0350B53E290DB998004D0ED5 /* UIGalleryView.swift in Sources */,
 				03C85833290583370054178A /* PhotoService.swift in Sources */,
 				03C858172905801C0054178A /* Source.swift in Sources */,
 				03C85823290581520054178A /* Social.swift in Sources */,
@@ -889,6 +904,7 @@
 				0376F56F29071D5600EB598D /* BasePhotoCell.swift in Sources */,
 				03C8581529057FAF0054178A /* Tag.swift in Sources */,
 				03C85807290579940054178A /* Method.swift in Sources */,
+				0350B542290DC41E004D0ED5 /* UIStackView.swift in Sources */,
 				037430722905D35C00FEABB7 /* HouseDetailsViewModel.swift in Sources */,
 				03C8582D290582970054178A /* JSONNull.swift in Sources */,
 				0376F5712907253000EB598D /* ActorCell.swift in Sources */,

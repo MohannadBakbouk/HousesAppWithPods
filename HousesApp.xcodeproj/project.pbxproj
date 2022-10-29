@@ -16,6 +16,7 @@
 		0350B53E290DB998004D0ED5 /* UIGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B53D290DB998004D0ED5 /* UIGalleryView.swift */; };
 		0350B542290DC41E004D0ED5 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B541290DC41E004D0ED5 /* UIStackView.swift */; };
 		0350B544290DCAB5004D0ED5 /* UIActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B543290DCAB5004D0ED5 /* UIActorView.swift */; };
+		0350B546290DD437004D0ED5 /* UITitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B545290DD437004D0ED5 /* UITitleView.swift */; };
 		036187A4290C68E800BCBC3A /* PersonPhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */; };
 		036187A6290C690000BCBC3A /* Actor1880Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A5290C690000BCBC3A /* Actor1880Response.json */; };
 		036187A8290C691500BCBC3A /* Actor1881Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A7290C691500BCBC3A /* Actor1881Response.json */; };
@@ -124,6 +125,7 @@
 		0350B53D290DB998004D0ED5 /* UIGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGalleryView.swift; sourceTree = "<group>"; };
 		0350B541290DC41E004D0ED5 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		0350B543290DCAB5004D0ED5 /* UIActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActorView.swift; sourceTree = "<group>"; };
+		0350B545290DD437004D0ED5 /* UITitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITitleView.swift; sourceTree = "<group>"; };
 		036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PersonPhotosResponse.json; sourceTree = "<group>"; };
 		036187A5290C690000BCBC3A /* Actor1880Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1880Response.json; sourceTree = "<group>"; };
 		036187A7290C691500BCBC3A /* Actor1881Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1881Response.json; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				0350B53D290DB998004D0ED5 /* UIGalleryView.swift */,
 				0350B543290DCAB5004D0ED5 /* UIActorView.swift */,
+				0350B545290DD437004D0ED5 /* UITitleView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -919,6 +922,7 @@
 				03C858372905860B0054178A /* BaseViewModelProtocol.swift in Sources */,
 				0374306E2905D33700FEABB7 /* HouseDetailsController.swift in Sources */,
 				03C8580F29057F3C0054178A /* PhotoQuery.swift in Sources */,
+				0350B546290DD437004D0ED5 /* UITitleView.swift in Sources */,
 				03C857B9290571040054178A /* SceneDelegate.swift in Sources */,
 				03C85845290592630054178A /* HouseViewData.swift in Sources */,
 				03C8582B290581F60054178A /* CoverPhoto.swift in Sources */,

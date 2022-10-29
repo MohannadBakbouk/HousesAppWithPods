@@ -34,6 +34,11 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         return actorsView
     }()
     
+    private var titleView: UITitleView = {
+        let titleView = UITitleView()
+        return titleView
+    }()
+    
     private var armsLabel : UILabel = {
         let lab = UILabel()
         lab.text = "Coat Of Arms"
@@ -58,36 +63,6 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         return stack
     }()
     
-    private lazy var tableView : UITableView = {
-        let table = UITableView()
-        table.backgroundColor = .red
-        table.showsVerticalScrollIndicator = false
-        table.allowsMultipleSelection = false
-        table.isScrollEnabled = false
-        table.rowHeight = UITableView.automaticDimension
-        table.estimatedRowHeight = 50
-        table.separatorStyle = .none
-        table.accessibilityIdentifier = "TitlesTableView"
-        return table
-    }()
-    
-    private var titleLabel : UILabel = {
-        let lab = UILabel()
-        lab.text = "Titles"
-        lab.font = UIFont.boldSystemFont(ofSize: 16)
-        return lab
-    }()
-    
-    private lazy var titleStack : UIStackView =  {
-        let stack = UIStackView(arrangedSubviews: [titleLabel, tableView])
-        stack.axis = .vertical
-        stack.spacing = 12
-        stack.distribution = .fill
-        stack.alignment = .fill
-        return stack
-    }()
-    var tableViewHeight : ConstraintMakerEditable!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -99,12 +74,11 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false
-        tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        tableViewHeight.constraint.update(offset: tableView.contentSize.height)
+        titleView.updateTableHeight()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -116,10 +90,9 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.addSubview(container)
-        container.addSubviews(contentOf: [galleryView, actorsView, titleStack , armsStack])
+        container.addSubviews(contentOf: [galleryView, actorsView, titleView , armsStack])
         setupNavigationBar()
         setupViewsConstraints()
-        setupTableview()
     }
     
     private func setupNavigationBar(){
@@ -131,13 +104,6 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         navigationItem.title = "Details"
     }
     
-    
-    private func setupTableview(){
-        tableView.register(TitleCell.self, forCellReuseIdentifier: String(describing: TitleCell.self))
-        tableView.dataSource = self
-        tableView.delegate = self
-    }
-
     private func setupViewsConstraints(){
         scrollView.snp.makeConstraints{$0.edges.equalTo(view.safeAreaLayoutGuide)}
         container.snp.makeConstraints{ maker in
@@ -157,18 +123,14 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
             $0.trailing.equalTo(container).offset(-10)
         }
         
-        titleStack.snp.makeConstraints{
+        titleView.snp.makeConstraints{
             $0.top.equalTo(actorsView.snp.bottom).offset(10)
             $0.leading.equalTo(container).offset(10)
             $0.trailing.equalTo(container).offset(-10)
         }
         
-        tableView.snp.makeConstraints { maker in
-            tableViewHeight = maker.height.equalTo(30)
-        }
-        
         armsStack.snp.makeConstraints{
-            $0.top.equalTo(titleStack.snp.bottom).offset(10)
+            $0.top.equalTo(titleView.snp.bottom).offset(10)
             $0.leading.equalTo(container).offset(10)
             $0.bottom.trailing.equalTo(container).offset(-10)
         }
@@ -181,29 +143,13 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
     }
 }
 
-
-extension HouseDetailsController: UITableViewDataSource , UITableViewDelegate{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.details.value.titles.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: TitleCell.self), for: indexPath) as! TitleCell
-        cell.configure(with: viewModel.details.value.titles[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-}
-
 extension HouseDetailsController {
     func bindingDetailsToViews(){
         viewModel.details
         .sink {[weak self] info in
             self?.armsValueLabel.text = info.arms
             self?.galleryView.showMainPicture(with: info.photo)
+            self?.titleView.setTitles(with: info.titles)
         }.store(in: &cancellables)
     }
     

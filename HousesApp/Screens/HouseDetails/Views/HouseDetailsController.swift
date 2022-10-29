@@ -211,6 +211,7 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         actorsCollectionView.register(ActorCell.self, forCellWithReuseIdentifier: String(describing: ActorCell.self))
         actorsCollectionView.dataSource = self
         actorsCollectionView.delegate = self
+        actorsCollectionView.isSkeletonable = true
     }
     
     private func setupTableview(){
@@ -279,12 +280,18 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         bindingDetailsToViews()
         bindingGallaryToCollection()
         bindingActorToCollection()
+        bindingIsLoadingToAnimator()
+    }
+    
+    func stopSkeletonAnimation(){
+        actorsCollectionView.stopSkeletonAnimation()
+        actorsCollectionView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
     }
 }
 
 extension HouseDetailsController: SkeletonCollectionViewDataSource  {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collectionView == gallryCollectionView ? viewModel.gallery.value.count : viewModel.actors.value.count
+        return collectionView == gallryCollectionView ? viewModel.gallery.value.count : (viewModel.actors.value?.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -295,18 +302,20 @@ extension HouseDetailsController: SkeletonCollectionViewDataSource  {
         }
         else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ActorCell.self), for: indexPath) as! ActorCell
-            cell.configure(with: viewModel.actors.value[indexPath.row])
+            cell.configure(with: viewModel.actors.value?[indexPath.row])
             cell.layoutIfNeeded()
             return cell
         }
     }
-}
-
-extension HouseDetailsController: UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
+    
     func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return  skeletonView == gallryCollectionView ? String(describing: PhotoCell.self) : String(describing: ActorCell.self)
     }
     
+}
+
+extension HouseDetailsController: UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let selected = viewModel.gallery.value[indexPath.row]
         pictureView.kf.setImage(with: URL(string: selected.mainUrl)!)
@@ -364,14 +373,23 @@ extension HouseDetailsController {
     func bindingActorToCollection(){
         viewModel.actors
         .receive(on: DispatchQueue.main)
+        .filter{$0 != nil}
         .sink {[weak self] items in
-            guard items.count > 0  else {
+            guard let items = items , items.count > 0  else {
                 self?.actorsCollectionView.reloadData()
                 self?.actorsCollectionView.setMessage(Messages.noResults)
                 return
             }
             self?.actorsCollectionView.hideMessage()
             self?.actorsCollectionView.reloadData()
+        }.store(in: &cancellables)
+    }
+    
+    func bindingIsLoadingToAnimator(){
+        viewModel.isLoading
+        .receive(on: DispatchQueue.main)
+        .sink {[weak self] status in
+            _  = status ? self?.actorsCollectionView.showAnimatedGradientSkeleton() : self?.stopSkeletonAnimation()
         }.store(in: &cancellables)
     }
 }

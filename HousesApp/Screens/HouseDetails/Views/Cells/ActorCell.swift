@@ -11,9 +11,10 @@ final class ActorCell: BasePhotoCell{
     
     private var nameLabel : UILabel = {
         let lab = UILabel()
-        lab.text = "Actor Name"
+        lab.text = ""
         lab.font = .boldSystemFont(ofSize: 15)
         lab.textColor = .white
+        lab.isSkeletonable = false
         return lab
     }()
     
@@ -21,6 +22,7 @@ final class ActorCell: BasePhotoCell{
          let view = UIView()
          view.backgroundColor = .red
          view.alpha = 0.5
+         view.isSkeletonable = true
          return view
     }()
     
@@ -30,6 +32,8 @@ final class ActorCell: BasePhotoCell{
     }
     
     override func setupViews() {
+        isSkeletonable = true
+        contentView.isSkeletonable = true
         contentView.addSubviews(contentOf:[photoView, bgView, nameLabel])
         setupContentView()
         setupViewsConstraints()
@@ -49,7 +53,8 @@ final class ActorCell: BasePhotoCell{
         }
     }
 
-    func configure(with model : ActorViewData){
+    func configure(with model : ActorViewData?){
+        guard let model = model else { return}
         nameLabel.text = model.name
         guard let url = URL(string: model.photo.mainUrl) else { return}
         photoView.kf.setImage(with: url)

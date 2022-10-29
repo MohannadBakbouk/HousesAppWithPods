@@ -17,7 +17,7 @@ class HouseDetailsViewModel: HouseDetailsViewModelProtocol {
     var actorService: ActorServiceProtocol
     var rawActors: CurrentValueSubject<[ActorQueryItem], Never>
     var actorsPhotos: CurrentValueSubject<[PhotoViewData], Never>
-    var actors: CurrentValueSubject<[ActorViewData] , Never>
+    var actors: CurrentValueSubject<[ActorViewData]? , Never>
     var actorGroup : DispatchGroup
     
     init(info: HouseViewData, photoService: PhotoServiceProtocol, actorService : ActorServiceProtocol) {
@@ -25,7 +25,7 @@ class HouseDetailsViewModel: HouseDetailsViewModelProtocol {
         self.actorService = actorService
         self.details = CurrentValueSubject(info)
         self.gallery = CurrentValueSubject([])
-        self.actors = CurrentValueSubject([])
+        self.actors = CurrentValueSubject(nil)
         self.rawActors = CurrentValueSubject([])
         self.actorsPhotos = CurrentValueSubject([])
         self.isLoading = PassthroughSubject()
@@ -52,10 +52,12 @@ class HouseDetailsViewModel: HouseDetailsViewModelProtocol {
     }
     
     func loadActors(){
+     isLoading.send(true)
       details.value.actors.forEach {[weak self] value in
             guard let self = self , let id = Int(value) else {return}
             self.actorGroup.enter()
             self.actorService.fetchActorDetails(id)
+            .delay(for: 3, scheduler:  RunLoop.main)
             .sink(receiveCompletion: {completed in
                 guard case .failure(_) = completed else {return}
                 self.actorGroup.leave()
@@ -78,10 +80,9 @@ class HouseDetailsViewModel: HouseDetailsViewModelProtocol {
         
         actorGroup.notify(queue: .global()) {[weak self] in
             guard let self = self else {return}
-            print(self.rawActors.value.count , self.actorsPhotos.value.count)
             let items = zip(self.rawActors.value, self.actorsPhotos.value).map{ActorViewData(info: $0, photo: $1)}
+            self.isLoading.send(false)
             self.actors.send(items)
         }
     }
-    
 }

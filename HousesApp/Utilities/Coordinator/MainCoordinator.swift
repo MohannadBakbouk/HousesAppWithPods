@@ -26,7 +26,7 @@ final class MainCoordinator: Coordinator{
     func showHouses() {
         let housesView = HousesController(viewModel: HousesViewModel(houseService: HouseService(), photoService: PhotoService()))
         housesView.coordinator = self
-        pushViewControllerToStack(with: housesView , isRoot: true)
+        pushViewControllerToStack(with:housesView, animated: false, isRoot: true)
     }
     
     func showHouseDetails(with value : HouseViewData){

@@ -10,7 +10,7 @@ import SnapKit
 import SkeletonView
 import Kingfisher
 
-class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
+final class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
     
     private var scrollView : UIScrollView = {
         let scroll = UIScrollView()
@@ -19,9 +19,18 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         return scroll
     }()
     
-    private var container : UIView = {
+   private var container : UIView = {
         let view = UIView()
         return view
+    }()
+    
+    private var contentStack : UIStackView = {
+        let stack = UIStackView()
+        stack.axis = .vertical
+        stack.spacing = 12
+        stack.distribution = .fill
+        stack.alignment = .fill
+        return stack
     }()
     
     private var galleryView: UIGalleryView = {
@@ -72,7 +81,8 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.addSubview(container)
-        container.addSubviews(contentOf: [galleryView, actorsView, titleView , armsInfoView])
+        contentStack.addArrangedSubviews(contentOf:  [galleryView, actorsView, titleView , armsInfoView])  //(contentOf:)
+        container.addSubview(contentStack)
         setupNavigationBar()
         setupViewsConstraints()
     }
@@ -93,29 +103,11 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
             maker.width.equalTo(scrollView).priority(.required)
             maker.height.equalTo(scrollView).priority(.low)
         }
-        
-        galleryView.snp.makeConstraints{
-            $0.top.leading.equalTo(container).offset(10)
-            $0.trailing.equalTo(container).offset(-10)
-        }
-        
-        actorsView.snp.makeConstraints{
-            $0.top.equalTo(galleryView.snp.bottom).offset(10)
-            $0.leading.equalTo(container).offset(10)
-            $0.trailing.equalTo(container).offset(-10)
-        }
-        
-        titleView.snp.makeConstraints{
-            $0.top.equalTo(actorsView.snp.bottom).offset(10)
-            $0.leading.equalTo(container).offset(10)
-            $0.trailing.equalTo(container).offset(-10)
-        }
-        
-        armsInfoView.snp.makeConstraints{
-            $0.top.equalTo(titleView.snp.bottom).offset(10)
-            $0.leading.equalTo(container).offset(10)
-            $0.bottom.trailing.equalTo(container).offset(-10)
-        }
+        contentStack.snp.makeConstraints{
+             $0.top.leading.equalTo(container).offset(10)
+             $0.trailing.equalTo(container).offset(-10)
+             $0.bottom.trailing.equalTo(container).offset(-10)
+         }
     }
     private func bindingViewsToViewModelEvents(){
         bindingDetailsToViews()

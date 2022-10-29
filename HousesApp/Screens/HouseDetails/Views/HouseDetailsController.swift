@@ -48,11 +48,15 @@ final class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         return titleView
     }()
     
-    private var armsInfoView: UIInfoView = {
+    private var regionInfoView: UIInfoView = {
         let infoView = UIInfoView()
         return infoView
     }()
     
+    private var armsInfoView: UIInfoView = {
+        let infoView = UIInfoView()
+        return infoView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +85,7 @@ final class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.addSubview(container)
-        contentStack.addArrangedSubviews(contentOf:  [galleryView, actorsView, titleView , armsInfoView])  //(contentOf:)
+        contentStack.addArrangedSubviews(contentOf:  [galleryView, actorsView, titleView, regionInfoView, armsInfoView])
         container.addSubview(contentStack)
         setupNavigationBar()
         setupViewsConstraints()
@@ -122,6 +126,7 @@ extension HouseDetailsController {
         viewModel.details
         .sink {[weak self] info in
             self?.armsInfoView.setInfo(model: info.arms)
+            self?.regionInfoView.setInfo(model: info.region)
             self?.galleryView.showMainPicture(with: info.photo)
             self?.titleView.setTitles(with: info.titles)
         }.store(in: &cancellables)

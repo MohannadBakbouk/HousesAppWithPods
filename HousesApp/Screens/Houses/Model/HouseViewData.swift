@@ -9,7 +9,7 @@ import Foundation
 struct HouseViewData {
     var photo : PhotoViewData
     var name : String
-    var region : String
+    var region : TinyInfoViewData
     var arms : TinyInfoViewData
     var titles : [String]
     var actors : [String]
@@ -19,7 +19,7 @@ struct HouseViewData {
 extension HouseViewData {
     init(info : HouseQueryItem , photo : PhotoQueryItem) {
         self.name = info.name
-        self.region = info.region
+        self.region = TinyInfoViewData(title: "Region", value: info.region)
         self.arms = TinyInfoViewData(title: "Coat Of Arms", value: info.coatOfArms)   
         self.titles = info.titles
         self.actors = info.swornMembers.map{String($0.split(separator: Character("/")).last ?? "")}

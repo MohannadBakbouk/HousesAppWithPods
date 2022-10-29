@@ -131,7 +131,7 @@ final class HouseCell: UICollectionViewCell {
     
     func configure(with model : HouseViewData){
         nameLabel.text = model.name
-        addressLabel.text = model.region
+        addressLabel.text = model.region.value
         guard let url = URL(string: model.photo.mainUrl) else { return}
         photoView.kf.setImage(with: url)
     }

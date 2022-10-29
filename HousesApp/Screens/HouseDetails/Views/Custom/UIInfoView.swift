@@ -21,6 +21,7 @@ final class UIInfoView: UIStackView {
         lab.text = ""
         lab.numberOfLines = 0
         lab.lineBreakMode = .byWordWrapping
+        lab.textColor = .systemGray
         return lab
     }()
     

@@ -39,30 +39,12 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         return titleView
     }()
     
-    private var armsLabel : UILabel = {
-        let lab = UILabel()
-        lab.text = "Coat Of Arms"
-        lab.font = UIFont.boldSystemFont(ofSize: 16)
-        return lab
+    private var armsInfoView: UIInfoView = {
+        let infoView = UIInfoView()
+        return infoView
     }()
     
-    private var armsValueLabel : UILabel = {
-        let lab = UILabel()
-        lab.text = "arms Label Value"
-        lab.numberOfLines = 0
-        lab.lineBreakMode = .byWordWrapping
-        return lab
-    }()
-    
-    private lazy var armsStack : UIStackView =  {
-        let stack = UIStackView(arrangedSubviews: [armsLabel, armsValueLabel])
-        stack.axis = .vertical
-        stack.spacing = 12
-        stack.distribution = .fill
-        stack.alignment = .fill
-        return stack
-    }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
@@ -90,7 +72,7 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.addSubview(container)
-        container.addSubviews(contentOf: [galleryView, actorsView, titleView , armsStack])
+        container.addSubviews(contentOf: [galleryView, actorsView, titleView , armsInfoView])
         setupNavigationBar()
         setupViewsConstraints()
     }
@@ -129,7 +111,7 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
             $0.trailing.equalTo(container).offset(-10)
         }
         
-        armsStack.snp.makeConstraints{
+        armsInfoView.snp.makeConstraints{
             $0.top.equalTo(titleView.snp.bottom).offset(10)
             $0.leading.equalTo(container).offset(10)
             $0.bottom.trailing.equalTo(container).offset(-10)
@@ -147,7 +129,7 @@ extension HouseDetailsController {
     func bindingDetailsToViews(){
         viewModel.details
         .sink {[weak self] info in
-            self?.armsValueLabel.text = info.arms
+            self?.armsInfoView.setInfo(model: info.arms)
             self?.galleryView.showMainPicture(with: info.photo)
             self?.titleView.setTitles(with: info.titles)
         }.store(in: &cancellables)

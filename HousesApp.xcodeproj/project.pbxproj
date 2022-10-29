@@ -17,6 +17,8 @@
 		0350B542290DC41E004D0ED5 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B541290DC41E004D0ED5 /* UIStackView.swift */; };
 		0350B544290DCAB5004D0ED5 /* UIActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B543290DCAB5004D0ED5 /* UIActorView.swift */; };
 		0350B546290DD437004D0ED5 /* UITitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B545290DD437004D0ED5 /* UITitleView.swift */; };
+		0350B54A290DDA4F004D0ED5 /* UIInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B549290DDA4F004D0ED5 /* UIInfoView.swift */; };
+		0350B54C290DDBCE004D0ED5 /* TinyInfoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B54B290DDBCE004D0ED5 /* TinyInfoViewData.swift */; };
 		036187A4290C68E800BCBC3A /* PersonPhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */; };
 		036187A6290C690000BCBC3A /* Actor1880Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A5290C690000BCBC3A /* Actor1880Response.json */; };
 		036187A8290C691500BCBC3A /* Actor1881Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A7290C691500BCBC3A /* Actor1881Response.json */; };
@@ -126,6 +128,8 @@
 		0350B541290DC41E004D0ED5 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		0350B543290DCAB5004D0ED5 /* UIActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActorView.swift; sourceTree = "<group>"; };
 		0350B545290DD437004D0ED5 /* UITitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITitleView.swift; sourceTree = "<group>"; };
+		0350B549290DDA4F004D0ED5 /* UIInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIInfoView.swift; sourceTree = "<group>"; };
+		0350B54B290DDBCE004D0ED5 /* TinyInfoViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinyInfoViewData.swift; sourceTree = "<group>"; };
 		036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PersonPhotosResponse.json; sourceTree = "<group>"; };
 		036187A5290C690000BCBC3A /* Actor1880Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1880Response.json; sourceTree = "<group>"; };
 		036187A7290C691500BCBC3A /* Actor1881Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1881Response.json; sourceTree = "<group>"; };
@@ -267,6 +271,7 @@
 				0350B53D290DB998004D0ED5 /* UIGalleryView.swift */,
 				0350B543290DCAB5004D0ED5 /* UIActorView.swift */,
 				0350B545290DD437004D0ED5 /* UITitleView.swift */,
+				0350B549290DDA4F004D0ED5 /* UIInfoView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 		0376F578290738EA00EB598D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0350B54B290DDBCE004D0ED5 /* TinyInfoViewData.swift */,
 				0376F5792907390100EB598D /* ActorViewData.swift */,
 			);
 			path = Model;
@@ -877,6 +883,7 @@
 			files = (
 				03C8584729059B1B0054178A /* UICollectionView.swift in Sources */,
 				03C857F6290573400054178A /* UIView.swift in Sources */,
+				0350B54C290DDBCE004D0ED5 /* TinyInfoViewData.swift in Sources */,
 				03C8583A290587110054178A /* ErrorDataView.swift in Sources */,
 				037430702905D34B00FEABB7 /* HouseDetailsViewModelProtocol.swift in Sources */,
 				03C85831290582F10054178A /* JSONCodingKey.swift in Sources */,
@@ -923,6 +930,7 @@
 				0374306E2905D33700FEABB7 /* HouseDetailsController.swift in Sources */,
 				03C8580F29057F3C0054178A /* PhotoQuery.swift in Sources */,
 				0350B546290DD437004D0ED5 /* UITitleView.swift in Sources */,
+				0350B54A290DDA4F004D0ED5 /* UIInfoView.swift in Sources */,
 				03C857B9290571040054178A /* SceneDelegate.swift in Sources */,
 				03C85845290592630054178A /* HouseViewData.swift in Sources */,
 				03C8582B290581F60054178A /* CoverPhoto.swift in Sources */,

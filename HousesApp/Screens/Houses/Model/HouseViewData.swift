@@ -10,7 +10,7 @@ struct HouseViewData {
     var photo : PhotoViewData
     var name : String
     var region : String
-    var arms : String
+    var arms : TinyInfoViewData
     var titles : [String]
     var actors : [String]
     var id : String
@@ -20,7 +20,7 @@ extension HouseViewData {
     init(info : HouseQueryItem , photo : PhotoQueryItem) {
         self.name = info.name
         self.region = info.region
-        self.arms = info.coatOfArms
+        self.arms = TinyInfoViewData(title: "Coat Of Arms", value: info.coatOfArms)   
         self.titles = info.titles
         self.actors = info.swornMembers.map{String($0.split(separator: Character("/")).last ?? "")}
         self.id = String(info.url.split(separator: Character("/")).last ?? "-1")

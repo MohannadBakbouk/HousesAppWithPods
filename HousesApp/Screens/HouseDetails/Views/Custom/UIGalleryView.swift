@@ -106,6 +106,7 @@ final class UIGalleryView: UIStackView {
        .receive(on: DispatchQueue.main)
        .sink {[weak self] items in
             guard items.count > 0 else {return}
+            self?.collectionView.reloadData()
             self?.collectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .left)
         }.store(in: &cancellables)
     }

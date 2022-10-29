@@ -15,6 +15,7 @@
 		0334A36C2908790000C4EAAE /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0334A36B2908790000C4EAAE /* TitleCell.swift */; };
 		0350B53E290DB998004D0ED5 /* UIGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B53D290DB998004D0ED5 /* UIGalleryView.swift */; };
 		0350B542290DC41E004D0ED5 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B541290DC41E004D0ED5 /* UIStackView.swift */; };
+		0350B544290DCAB5004D0ED5 /* UIActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350B543290DCAB5004D0ED5 /* UIActorView.swift */; };
 		036187A4290C68E800BCBC3A /* PersonPhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */; };
 		036187A6290C690000BCBC3A /* Actor1880Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A5290C690000BCBC3A /* Actor1880Response.json */; };
 		036187A8290C691500BCBC3A /* Actor1881Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 036187A7290C691500BCBC3A /* Actor1881Response.json */; };
@@ -122,6 +123,7 @@
 		0334A36B2908790000C4EAAE /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		0350B53D290DB998004D0ED5 /* UIGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGalleryView.swift; sourceTree = "<group>"; };
 		0350B541290DC41E004D0ED5 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		0350B543290DCAB5004D0ED5 /* UIActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIActorView.swift; sourceTree = "<group>"; };
 		036187A3290C68E800BCBC3A /* PersonPhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PersonPhotosResponse.json; sourceTree = "<group>"; };
 		036187A5290C690000BCBC3A /* Actor1880Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1880Response.json; sourceTree = "<group>"; };
 		036187A7290C691500BCBC3A /* Actor1881Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1881Response.json; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				0350B53D290DB998004D0ED5 /* UIGalleryView.swift */,
+				0350B543290DCAB5004D0ED5 /* UIActorView.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -907,6 +910,7 @@
 				0350B542290DC41E004D0ED5 /* UIStackView.swift in Sources */,
 				037430722905D35C00FEABB7 /* HouseDetailsViewModel.swift in Sources */,
 				03C8582D290582970054178A /* JSONNull.swift in Sources */,
+				0350B544290DCAB5004D0ED5 /* UIActorView.swift in Sources */,
 				0376F5712907253000EB598D /* ActorCell.swift in Sources */,
 				03C8581B290580B40054178A /* Urls.swift in Sources */,
 				03C8583C290587940054178A /* HousesViewModel.swift in Sources */,

@@ -29,39 +29,9 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         return galleryView
     }()
     
-    private lazy var actorsCollectionView : UICollectionView = {
-        let collection = UICollectionView(frame: .zero , collectionViewLayout: actorsCollectionViewLayout)
-        collection.backgroundColor = .white
-        collection.allowsMultipleSelection = false
-        collection.showsHorizontalScrollIndicator = false
-        collection.showsVerticalScrollIndicator = false
-        collection.accessibilityIdentifier = "actorsCollection"
-        return collection
-    }()
-    
-    private lazy var actorsCollectionViewLayout : UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 10
-        layout.minimumInteritemSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-        return layout
-    }()
-    
-    private var actorsLabel : UILabel = {
-        let lab = UILabel()
-        lab.text = "Actors"
-        lab.font = UIFont.boldSystemFont(ofSize: 16)
-        return lab
-    }()
-    
-    private lazy var actorsStack : UIStackView =  {
-        let stack = UIStackView(arrangedSubviews: [actorsLabel, actorsCollectionView])
-        stack.axis = .vertical
-        stack.spacing = 12
-        stack.distribution = .fill
-        stack.alignment = .fill
-        return stack
+    private var actorsView: UIActorView = {
+        let actorsView = UIActorView()
+        return actorsView
     }()
     
     private var armsLabel : UILabel = {
@@ -146,11 +116,9 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         view.backgroundColor = .white
         view.addSubview(scrollView)
         scrollView.addSubview(container)
-        container.addSubviews(contentOf: [galleryView, actorsStack, titleStack , armsStack])
+        container.addSubviews(contentOf: [galleryView, actorsView, titleStack , armsStack])
         setupNavigationBar()
         setupViewsConstraints()
-        setupCollectionViews()
-        setupCollectionCellSize()
         setupTableview()
     }
     
@@ -163,24 +131,13 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         navigationItem.title = "Details"
     }
     
-    private func setupCollectionViews(){
-        actorsCollectionView.register(ActorCell.self, forCellWithReuseIdentifier: String(describing: ActorCell.self))
-        actorsCollectionView.dataSource = self
-        actorsCollectionView.delegate = self
-        actorsCollectionView.isSkeletonable = true
-    }
     
     private func setupTableview(){
         tableView.register(TitleCell.self, forCellReuseIdentifier: String(describing: TitleCell.self))
         tableView.dataSource = self
         tableView.delegate = self
     }
-    
-    private func setupCollectionCellSize(){
-        let actorWidth = (UIScreen.main.bounds.width) / 1.7
-        actorsCollectionViewLayout.itemSize = CGSize(width: actorWidth , height: 250)
-    }
-    
+
     private func setupViewsConstraints(){
         scrollView.snp.makeConstraints{$0.edges.equalTo(view.safeAreaLayoutGuide)}
         container.snp.makeConstraints{ maker in
@@ -194,18 +151,14 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
             $0.trailing.equalTo(container).offset(-10)
         }
         
-        actorsStack.snp.makeConstraints{
+        actorsView.snp.makeConstraints{
             $0.top.equalTo(galleryView.snp.bottom).offset(10)
             $0.leading.equalTo(container).offset(10)
             $0.trailing.equalTo(container).offset(-10)
         }
         
-        actorsCollectionView.snp.makeConstraints { maker in
-            maker.height.equalTo(250)
-        }
-        
         titleStack.snp.makeConstraints{
-            $0.top.equalTo(actorsStack.snp.bottom).offset(10)
+            $0.top.equalTo(actorsView.snp.bottom).offset(10)
             $0.leading.equalTo(container).offset(10)
             $0.trailing.equalTo(container).offset(-10)
         }
@@ -226,40 +179,8 @@ class HouseDetailsController: BaseViewController<HouseDetailsViewModel> {
         bindingActorToCollection()
         bindingIsLoadingToAnimator()
     }
-    
-    func stopSkeletonAnimation(){
-        actorsCollectionView.stopSkeletonAnimation()
-        actorsCollectionView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.2))
-    }
 }
 
-extension HouseDetailsController: SkeletonCollectionViewDataSource  {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return  (viewModel.actors.value?.count ?? 0)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: ActorCell.self), for: indexPath) as! ActorCell
-            cell.configure(with: viewModel.actors.value?[indexPath.row])
-            cell.layoutIfNeeded()
-            return cell
-        
-    }
-    
-    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return   String(describing: ActorCell.self)
-    }
-    
-}
-
-extension HouseDetailsController: UICollectionViewDelegate , UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let width = (collectionView.frame.width - 10) / 1.7
-            let hieght = (collectionView.frame.height - 10 )
-            return CGSize(width: width , height: hieght)
-    }
-}
 
 extension HouseDetailsController: UITableViewDataSource , UITableViewDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -294,24 +215,15 @@ extension HouseDetailsController {
     
     func bindingActorToCollection(){
         viewModel.actors
-        .receive(on: DispatchQueue.main)
-        .filter{$0 != nil}
-        .sink {[weak self] items in
-            guard let items = items , items.count > 0  else {
-                self?.actorsCollectionView.reloadData()
-                self?.actorsCollectionView.setMessage(Messages.noResults)
-                return
-            }
-            self?.actorsCollectionView.hideMessage()
-            self?.actorsCollectionView.reloadData()
-        }.store(in: &cancellables)
+        .assign(to: \.value, on: actorsView.items)
+        .store(in: &cancellables)
     }
     
     func bindingIsLoadingToAnimator(){
         viewModel.isLoading
         .receive(on: DispatchQueue.main)
         .sink {[weak self] status in
-            _  = status ? self?.actorsCollectionView.showAnimatedGradientSkeleton() : self?.stopSkeletonAnimation()
+            _  = status ? self?.actorsView.startCollectionSkeletonAnimation() : self?.actorsView.stopCollectionSkeletonAnimation()
         }.store(in: &cancellables)
     }
 }

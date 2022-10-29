@@ -18,9 +18,15 @@ final class MainCoordinator: Coordinator{
     }
     
     func start() {
+        let splash = SplashController()
+        splash.coordinator = self
+        pushViewControllerToStack(with: splash)
+    }
+    
+    func showHouses() {
         let housesView = HousesController(viewModel: HousesViewModel(houseService: HouseService(), photoService: PhotoService()))
         housesView.coordinator = self
-        pushViewControllerToStack(with: housesView)
+        pushViewControllerToStack(with: housesView , isRoot: true)
     }
     
     func showHouseDetails(with value : HouseViewData){
@@ -36,7 +42,8 @@ final class MainCoordinator: Coordinator{
 }
 
 extension MainCoordinator {
-    func pushViewControllerToStack(with value : UIViewController , animated : Bool = true){
+    func pushViewControllerToStack(with value : UIViewController , animated : Bool = true ,  isRoot: Bool = false){
+        _ = isRoot ? navigationController.setViewControllers([], animated: false) : ()
         navigationController.pushViewController(value, animated: animated)
     }
 }

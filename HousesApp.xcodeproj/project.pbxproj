@@ -40,6 +40,7 @@
 		0385D41A2909D715006BAE91 /* Actor1882Response.json in Resources */ = {isa = PBXBuildFile; fileRef = 0385D4192909D715006BAE91 /* Actor1882Response.json */; };
 		0385D41C2909D769006BAE91 /* PersonPhotosResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 0385D41B2909D769006BAE91 /* PersonPhotosResponse.json */; };
 		0385D41E2909DC97006BAE91 /* HouseDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0385D41D2909DC97006BAE91 /* HouseDetailsViewModelTests.swift */; };
+		03923585290D73F200630A58 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03923584290D73F200630A58 /* SplashController.swift */; };
 		03C857B7290571040054178A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857B6290571040054178A /* AppDelegate.swift */; };
 		03C857B9290571040054178A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857B8290571040054178A /* SceneDelegate.swift */; };
 		03C857BB290571040054178A /* HousesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C857BA290571040054178A /* HousesController.swift */; };
@@ -143,6 +144,7 @@
 		0385D4192909D715006BAE91 /* Actor1882Response.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Actor1882Response.json; sourceTree = "<group>"; };
 		0385D41B2909D769006BAE91 /* PersonPhotosResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = PersonPhotosResponse.json; sourceTree = "<group>"; };
 		0385D41D2909DC97006BAE91 /* HouseDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		03923584290D73F200630A58 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		03C857B3290571040054178A /* HousesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HousesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03C857B6290571040054178A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03C857B8290571040054178A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 			isa = PBXGroup;
 			children = (
 				03C857C1290571050054178A /* LaunchScreen.storyboard */,
+				03923584290D73F200630A58 /* SplashController.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -889,6 +892,7 @@
 				03C8581B290580B40054178A /* Urls.swift in Sources */,
 				03C8583C290587940054178A /* HousesViewModel.swift in Sources */,
 				03C8580D29057ED40054178A /* HouseQueryItem.swift in Sources */,
+				03923585290D73F200630A58 /* SplashController.swift in Sources */,
 				03C858372905860B0054178A /* BaseViewModelProtocol.swift in Sources */,
 				0374306E2905D33700FEABB7 /* HouseDetailsController.swift in Sources */,
 				03C8580F29057F3C0054178A /* PhotoQuery.swift in Sources */,

@@ -31,7 +31,7 @@ class HouseDetailsUITests: SuperXCTestCase {
     
     func testIsGalleryShown(){
         navigateToDetails()
-        XCTAssert(app.collectionViews[galleryCollection].waitForExistence(timeout: 5))
+        XCTAssert(app.collectionViews[galleryCollection].waitForExistence(timeout: 10))
         XCTAssert(app.collectionViews[galleryCollection].cells.count > 0)
         XCTAssert(app.collectionViews[galleryCollection].cells.firstMatch.isSelected)
     }
@@ -44,13 +44,14 @@ class HouseDetailsUITests: SuperXCTestCase {
     
     func testAreActorsShown(){
         navigateToDetails()
-        XCTAssert(app.collectionViews[actorsCollection].waitForExistence(timeout: 5))
+        XCTAssert(app.collectionViews[actorsCollection].waitForExistence(timeout: 10))
         XCTAssert(app.collectionViews[actorsCollection].cells.count > 0)
     }
     
     func testAreActorsNamesShown(){
         navigateToDetails()
-        XCTAssert(app.collectionViews[actorsCollection].waitForExistence(timeout: 5))
+        _ = XCTWaiter.wait(for: [expectation(description: "Wait for collectionView to appear")], timeout: 20)
+        XCTAssert(app.collectionViews[actorsCollection].exists)
         XCTAssert(app.collectionViews[actorsCollection].cells.staticTexts["Robb Stark"].exists)
         XCTAssert(app.collectionViews[actorsCollection].cells.staticTexts["Robin"].exists)
         app.collectionViews[actorsCollection].swipeLeft()
@@ -59,7 +60,7 @@ class HouseDetailsUITests: SuperXCTestCase {
     
     func testAreTitlesShown(){
         navigateToDetails()
-        XCTAssert(app.tables[titlesTableView].waitForExistence(timeout: 5))
+        XCTAssert(app.tables[titlesTableView].waitForExistence(timeout: 15))
         XCTAssert(app.tables[titlesTableView].cells.count > 0)
     }
     
@@ -71,14 +72,16 @@ class HouseDetailsUITests: SuperXCTestCase {
     func testIsBackButtonWorking(){
         navigateToDetails()
         app.navigationBars.buttons.element(boundBy: 0).tap()
-        XCTAssert(app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 5))
+        XCTAssert(app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 15))
         XCTAssert(app.collectionViews[collectionViewIdentifier].cells.count > 0)
     }
     
     func navigateToDetails(){
         initNormalServer()
         app.launch()
-        _ = app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 10)
+        _ = app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 30)
+        _ = app.collectionViews[collectionViewIdentifier].cells[targetCellIdentifier].waitForExistence(timeout: 20)
         app.collectionViews[collectionViewIdentifier].cells[targetCellIdentifier].tap()
+        
     }
 }

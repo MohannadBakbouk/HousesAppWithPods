@@ -39,7 +39,7 @@ class ActualServicesTests: XCTestCase {
         } receiveValue: { value in
             results.append(contentsOf: value)
         }.store(in: &cancellables)
-        _ = XCTWaiter.wait(for: [expectation], timeout: 5)
+        _ = XCTWaiter.wait(for: [expectation], timeout: 10)
         XCTAssert(results.count > 0  , "Failed to fetch house from api")
     }
 
@@ -53,7 +53,7 @@ class ActualServicesTests: XCTestCase {
         } receiveValue: { value in
             results.append(contentsOf: value.results)
         }.store(in: &cancellables)
-        _ = XCTWaiter.wait(for: [expectation], timeout: 5)
+        _ = XCTWaiter.wait(for: [expectation], timeout: 10)
         
         XCTAssert(results.count > 0  , "Failed to fetch photos from api")
     }
@@ -69,7 +69,7 @@ class ActualServicesTests: XCTestCase {
             result = value
         }.store(in: &cancellables)
 
-        _ = XCTWaiter.wait(for: [expectation], timeout: 5)
+        _ = XCTWaiter.wait(for: [expectation], timeout: 10)
         XCTAssert(result != nil   , "Failed to fetch actor's details from api")
     }
 }

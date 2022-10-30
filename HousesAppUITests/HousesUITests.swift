@@ -30,7 +30,7 @@ class HousesUITests: SuperXCTestCase {
     func testAreHousesShown() throws {
         initNormalServer()
         app.launch()
-        XCTAssert(app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 5))
+        XCTAssert(app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 15))
         XCTAssert(app.collectionViews[collectionViewIdentifier].cells.count > 0)
     }
     
@@ -38,7 +38,7 @@ class HousesUITests: SuperXCTestCase {
         initNormalServer()
         app.launch()
         XCTContext.runActivity(named: "House information are displayed") { _ in
-            XCTAssert(app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 5))
+            _ = XCTWaiter.wait(for: [expectation(description: "Wait for collectionView to appear")], timeout: 20)
             XCTAssert(app.images["houseImageView"].exists)
             XCTAssert(app.images["addressImageView"].exists)
             XCTAssert(app.staticTexts["House Arryn of the Eyrie"].exists)
@@ -49,7 +49,8 @@ class HousesUITests: SuperXCTestCase {
     func testSelectingHouseShowsDetails(){
         initNormalServer()
         app.launch()
-        XCTAssert(app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 5))
+        _ = XCTWaiter.wait(for: [expectation(description: "Wait for collectionView to appear")], timeout: 20)
+        XCTAssert(app.collectionViews[collectionViewIdentifier].exists)
         app.collectionViews[collectionViewIdentifier].cells.firstMatch.tap()
         XCTAssert(app.navigationBars["Details"].exists)
     }
@@ -57,7 +58,8 @@ class HousesUITests: SuperXCTestCase {
     func testIsErrorShown(){
         initFailureServer()
         app.launch()
-        XCTAssert(app.collectionViews[collectionViewIdentifier].waitForExistence(timeout: 5))
+        _ = XCTWaiter.wait(for: [expectation(description: "Wait for collectionView to appear")], timeout: 20)
+        XCTAssert(app.collectionViews[collectionViewIdentifier].exists)
         XCTAssert(app.collectionViews[collectionViewIdentifier].staticTexts["an internal error occured in server side please try again later"].exists)
     }
 }

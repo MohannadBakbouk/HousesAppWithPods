@@ -29,7 +29,7 @@ final class HousesViewModel : HousesViewModelProtocol{
         isLoading.send(true)
         houseService.fetchHouses()
         .combineLatest(photoService.searchPhotos(photoParams))
-        .delay(for: 5, scheduler: RunLoop.main)
+        .delay(for: 3, scheduler: RunLoop.main)
         .sink {[weak self] completed in
             guard case .failure(let error) = completed else {return}
             self?.isLoading.send(false)

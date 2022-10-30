@@ -57,7 +57,7 @@ class HouseDetailsViewModel: HouseDetailsViewModelProtocol {
             guard let self = self , let id = Int(value) else {return}
             self.actorGroup.enter()
             self.actorService.fetchActorDetails(id)
-            .delay(for: 3, scheduler:  RunLoop.main)
+            .delay(for: 2, scheduler:  RunLoop.main)
             .sink(receiveCompletion: {completed in
                 guard case .failure(_) = completed else {return}
                 self.actorGroup.leave()

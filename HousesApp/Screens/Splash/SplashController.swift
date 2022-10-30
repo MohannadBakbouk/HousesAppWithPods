@@ -58,7 +58,7 @@ class SplashController: UIViewController {
     
     func routeToNextScreen()  {
         inidicatorView.startAnimating()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             self.coordinator?.showHouses()
         }
     }
